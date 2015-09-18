@@ -36,7 +36,6 @@ RUN echo "deb-src http://ftp.cn.debian.org/debian-security/ jessie/updates main 
 
 RUN apt-get update
 RUN apt-get install -y  emacs git subversion libapache2-svn
-
 WORKDIR /benwork
 #RUN svn checkout  https://source.sakaiproject.org/svn/sakai/tags/sakai-10.5
 
@@ -46,7 +45,7 @@ ENV MAVEN_HOME /tools/apache-maven-3.3.3
 ENV JAVA_HOME /tools/jdk1.7.0_79
 RUN /bin/sh ~/.bashrc
 
-#RUN mvn clean install sakai:deploy -Dmaven.test.skip=true -Dmaven.tomcat.home=/tools/apache-tomcat-7.0.64 -Dsakai.home=/tools/apache-tomcat-7.0.64/sakai 
+RUN $MAVEN_HOME/bin/mvn clean install sakai:deploy -Dmaven.test.skip=true -Dmaven.tomcat.home=/tools/apache-tomcat-7.0.64 -Dsakai.home=/tools/apache-tomcat-7.0.64/sakai 
 
 
 
