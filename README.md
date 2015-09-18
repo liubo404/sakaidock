@@ -1,4 +1,6 @@
 #first comment
+[visit sakai](https://sakaiproject.org)
+
 Line number one
 Line number two
 
@@ -59,3 +61,21 @@ function main() {
 ```
 
 > Pardon my french
+
+
+#Horizontal Lines
+
+Don't confuse with this H2
+---------------------------
+
+----
+
+Another line goes below
+***
+
+This would create a line too
+****
+
+so would tis 
+
+------
