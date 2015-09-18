@@ -19,6 +19,8 @@ Here is an underlined H2
 
 An ordered list of stuff to learn
 1. Muay Thai
+   1. one
+   2. two
 2. Ben
 3. Spanish
 
@@ -35,9 +37,9 @@ A list of movies to watch
 
 
 A list of things to do
-*Go fitness
-*Go swimming
-*GO Gym
+* Go fitness
+* Go swimming
+* GO Gym
 
 #Text Styles
 *Italics Text*
@@ -50,8 +52,10 @@ __This is also bold__
 This is inline `code` right here.
 
 And this is a function:
- `   function main() {
+```   
+function main() {
     	 return "hello";
-    }`
+    }
+```
 
 > Pardon my french
