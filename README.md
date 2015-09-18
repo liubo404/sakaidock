@@ -38,3 +38,18 @@ A list of things to do
 * Go fitness
 * Go swimming
 * GO Gym
+
+#Text Styles
+*Italics Text*
+**Bold text**
+_This is also in italics_
+__This is also bold__
+
+
+#code
+This is inline `code` right here.
+
+And this is a function:
+    function main() {
+    	 return "hello";
+    }
