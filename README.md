@@ -50,6 +50,6 @@ __This is also bold__
 This is inline `code` right here.
 
 And this is a function:
-    function main() {
+ `   function main() {
     	 return "hello";
-    }
+    }`
