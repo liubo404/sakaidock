@@ -35,9 +35,9 @@ A list of movies to watch
 
 
 A list of things to do
-* Go fitness
-* Go swimming
-* GO Gym
+*Go fitness
+*Go swimming
+*GO Gym
 
 #Text Styles
 *Italics Text*
