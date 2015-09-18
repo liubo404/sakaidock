@@ -79,3 +79,24 @@ This would create a line too
 so would tis 
 
 ------
+
+#xml
+```xml
+<!--    <repository>
+          <id>bupt</id>
+          <url>http://112.124.28.128:8081/nexus/content/groups/public</url>
+          <releases>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+            <checksumPolicy>warn</checksumPolicy>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+            <checksumPolicy>warn</checksumPolicy>
+          </snapshots>
+        </repository>
+-->
+
+
+```
