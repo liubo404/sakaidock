@@ -100,3 +100,7 @@ so would tis
 
 
 ```
+
+```git
+git rm --cached -r jdk1.7.0_79
+```
