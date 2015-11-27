@@ -1,0 +1,2184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+            <title>Development Environment Setup Walkthrough - WG: Programmer's Cafe - Confluence</title>
+    
+    
+    
+    
+    
+    
+
+            
+<meta id="confluence-context-path" name="confluence-context-path" content="/confluence">
+<script type="text/javascript">
+    // Deprecated global variables. To be removed in a future version of Confluence.
+    var contextPath = '/confluence';
+    var i18n = [];
+</script>
+
+
+
+<!-- include system resources -->
+<link type="text/css" rel="stylesheet" href="Development+Environment+Setup+Walkthrough_files/master.css" title="Confluence Master Stylesheet" media="all">
+<link type="text/css" rel="stylesheet" href="Development+Environment+Setup+Walkthrough_files/wiki-content.css" media="all">
+<link type="text/css" rel="stylesheet" href="Development+Environment+Setup+Walkthrough_files/tabs.css" media="all">
+<link type="text/css" rel="stylesheet" href="Development+Environment+Setup+Walkthrough_files/menu.css" media="all">
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" href="/confluence/s/1415/11/1.0/_/download/resources/confluence.web.resources:master-styles/menu-ie.css" media="all"/>
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="Development+Environment+Setup+Walkthrough_files/tables.css" media="all">
+<link type="text/css" rel="stylesheet" href="Development+Environment+Setup+Walkthrough_files/panels.css" media="all">
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" href="/confluence/s/1415/11/1.0/_/download/resources/confluence.web.resources:master-styles/master-ie.css" title="Master-IE" media="all"/>
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="Development+Environment+Setup+Walkthrough_files/renderer-macros.css" media="all">
+<link type="text/css" rel="stylesheet" href="Development+Environment+Setup+Walkthrough_files/information-macros.css" media="all">
+<link type="text/css" rel="stylesheet" href="Development+Environment+Setup+Walkthrough_files/layout-macros.css" media="all">
+<script type="text/javascript" src="Development+Environment+Setup+Walkthrough_files/prototype.js"></script>
+<script type="text/javascript" src="Development+Environment+Setup+Walkthrough_files/effects.js"></script>
+<script type="text/javascript" src="Development+Environment+Setup+Walkthrough_files/dragdrop.js"></script>
+<script type="text/javascript" src="Development+Environment+Setup+Walkthrough_files/controls.js"></script>
+<script type="text/javascript" src="Development+Environment+Setup+Walkthrough_files/util_002.js"></script>
+<script type="text/javascript" src="Development+Environment+Setup+Walkthrough_files/jquery.js"></script>
+<script type="text/javascript" src="Development+Environment+Setup+Walkthrough_files/jquery-compatibility.js"></script>
+<script type="text/javascript" src="Development+Environment+Setup+Walkthrough_files/jquery_002.js"></script>
+<script type="text/javascript" src="Development+Environment+Setup+Walkthrough_files/atlassian.js"></script>
+<script type="text/javascript" src="Development+Environment+Setup+Walkthrough_files/engine.js"></script>
+<script type="text/javascript" src="Development+Environment+Setup+Walkthrough_files/util.js"></script>
+<script type="text/javascript" src="Development+Environment+Setup+Walkthrough_files/AddLabeltoEntity.js"></script>
+<script type="text/javascript" src="Development+Environment+Setup+Walkthrough_files/RemoveLabelFromEntity.js"></script>
+<script type="text/javascript" src="Development+Environment+Setup+Walkthrough_files/SuggestedLabelsForEntity.js"></script>
+<script type="text/javascript" src="Development+Environment+Setup+Walkthrough_files/GenerateAutocompleteLabelsListForEntity.js"></script>
+<script type="text/javascript" src="Development+Environment+Setup+Walkthrough_files/uberlabels.js"></script>
+<script type="text/javascript" src="Development+Environment+Setup+Walkthrough_files/labels-editor.js"></script>
+<link type="text/css" rel="stylesheet" href="Development+Environment+Setup+Walkthrough_files/autocomplete.css" media="all">
+<link type="text/css" rel="stylesheet" href="Development+Environment+Setup+Walkthrough_files/labels.css" media="all">
+<script type="text/javascript" src="Development+Environment+Setup+Walkthrough_files/animation.js"></script>
+<script type="text/javascript" src="Development+Environment+Setup+Walkthrough_files/comments.js"></script>
+<link type="text/css" rel="stylesheet" href="Development+Environment+Setup+Walkthrough_files/comments.css" media="all">
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" href="/confluence/s/1415/11/1.0/_/download/resources/confluence.web.resources:comments/comments-ie.css" media="all"/>
+<![endif]-->
+<script type="text/javascript" src="Development+Environment+Setup+Walkthrough_files/breadcrumbs.js"></script>
+<script type="text/javascript" src="Development+Environment+Setup+Walkthrough_files/master.js"></script>
+<script type="text/javascript" src="Development+Environment+Setup+Walkthrough_files/menu.js"></script>
+<script type="text/javascript" src="Development+Environment+Setup+Walkthrough_files/PageNotification.js"></script>
+<link type="text/css" rel="stylesheet" href="Development+Environment+Setup+Walkthrough_files/print.css" media="print">
+<script type="text/javascript" src="Development+Environment+Setup+Walkthrough_files/atlassian-effects.js"></script>
+
+<!-- end system resources -->
+
+    <link rel="stylesheet" href="Development+Environment+Setup+Walkthrough_files/combined.css" type="text/css">
+
+    <meta name="confluence-request-time" content="1231980991725">
+<link rel="shortcut icon" href="http://bugs.sakaiproject.org/confluence/images/icons/favicon.ico">
+<link rel="icon" type="image/png" href="http://bugs.sakaiproject.org/confluence/images/icons/favicon.png">
+
+
+    
+</head><body onload="placeFocus()" id="com-atlassian-confluence">
+    
+
+
+    <script type="text/javascript">
+        AJS.toInit(function ($) {
+            $(".message-close-button").each(function () {
+                var li = $(this).parent();
+                var cookieId = this.alt;
+                $(this).click(function () {
+                    li.slideUp();
+                    setCookie(cookieId, true);
+                });
+            });
+
+            $("#messageContainer .confluence-messages").each(function () {
+                if (!getCookie(this.id)) {
+                    $(this).show();
+                }
+            })
+        });
+    </script>
+
+        
+<div id="header">
+        <form id="quick-search" method="get" action="/confluence/dosearchsite.action">
+                <fieldset>
+            <legend>Quick Search</legend>
+                        <input name="where" value="conf_all" type="hidden">
+            <input class="placeholded" id="quick-search-query" accesskey="q" name="queryString" size="25" type="text">
+            <input id="quick-search-submit" value="Search" type="submit">
+        </fieldset>
+        <fieldset class="hidden parameters">
+            <input id="quickSearchPlaceholder" value="Search" type="hidden">
+        </fieldset>
+    </form>
+    <ul id="header-menu-bar" class="ajs-menu-bar">
+                    
+        
+            <li class="normal ajs-menu-item">
+        <a id="browse-menu-link" class="browse trigger ajs-menu-title" href="#"><span><span>Browse</span></span></a>         <div class="hidden ajs-drop-down">
+                        <ul id="browse-menu-link-leading" class="section-leading first">
+                                        <li>
+    
+    <a id="space-pages-link" href="http://bugs.sakaiproject.org/confluence/pages/listpages.action?key=BOOT" class="">
+                   <span>Pages</span>            </a>
+</li>
+                                        <li>
+    
+    <a id="space-blogposts-link" href="http://bugs.sakaiproject.org/confluence/pages/viewrecentblogposts.action?key=BOOT" class="">
+                   <span>News</span>            </a>
+</li>
+                                        <li>
+    
+    <a id="space-labels-link" href="http://bugs.sakaiproject.org/confluence/labels/listlabels-heatmap.action?key=BOOT" class="">
+                   <span>Labels</span>            </a>
+</li>
+                                        <li>
+    
+    <a id="space-attachments-link" href="http://bugs.sakaiproject.org/confluence/spaces/listattachmentsforspace.action?key=BOOT" class="">
+                   <span>Attachments</span>            </a>
+</li>
+                                        <li>
+    
+    <a href="http://bugs.sakaiproject.org/confluence/spaces/space-bookmarks.action?spaceKey=BOOT" class="">
+                   <span>Bookmarks</span>            </a>
+</li>
+                                        <li>
+    
+    <a id="space-mail-link" href="http://bugs.sakaiproject.org/confluence/spaces/viewmailarchive.action?key=BOOT" class="">
+                   <span>Mail</span>            </a>
+</li>
+                                        <li>
+    
+    <a id="space-advanced-link" href="http://bugs.sakaiproject.org/confluence/spaces/viewspacesummary.action?key=BOOT" class="">
+                   <span>Advanced</span>            </a>
+</li>
+                                        <li>
+    
+    <a href="http://bugs.sakaiproject.org/confluence/spaces/usage/report.action?key=BOOT" class="">
+                   <span>Activity</span>            </a>
+</li>
+                            </ul>
+                        <ul id="browse-menu-link-global" class="section-global">
+                                        <li>
+    
+    <a id="people-directory-link" href="http://bugs.sakaiproject.org/confluence/peopledirectory.action" class="">
+                   <span>People Directory</span>            </a>
+</li>
+                            </ul>
+                    </div>
+    </li>
+        
+                                                         <li class="ajs-menu-item normal">
+    
+    <a id="login-link" href="http://bugs.sakaiproject.org/confluence/confluence/login.action?os_destination=%2Fdisplay%2FBOOT%2FDevelopment%2BEnvironment%2BSetup%2BWalkthrough" class="user-item login-link">
+                   <span>Log In</span>            </a>
+</li>
+                            </ul>
+    
+    
+    <ol id="breadcrumbs">
+                    
+        <li><span>
+                                            <a href="http://bugs.sakaiproject.org/confluence/dashboard.action">Dashboard</a>
+                </span></li>
+                    
+        <li><span>
+         &gt;                                     <a href="http://bugs.sakaiproject.org/confluence/display/BOOT">WG: Programmers Cafe</a>
+                </span></li>
+                                        <li id="ellipsis" title="    …
+                    Home
+        …"><span>&gt; <strong>…</strong></span></li>
+                                    
+        <li class="hidden-crumb"><span>
+         &gt;                                     <a href="http://bugs.sakaiproject.org/confluence/display/BOOT/Home">Home</a>
+                </span></li>
+                    
+        <li><span>
+         &gt;                                     <a href="http://bugs.sakaiproject.org/confluence/display/BOOT/Sakai+Programmer+Manual">Sakai Programmer Manual</a>
+                </span></li>
+                    
+        <li><span>
+         &gt;                                     Development Environment Setup Walkthrough
+                </span></li>
+        </ol>
+
+</div>
+<div id="main">
+    
+                <ul id="user-control-panel">
+                                
+            <li class="first"><a href="http://bugs.sakaiproject.org/confluence/login.action?os_destination=%2Fdisplay%2FBOOT%2FDevelopment%2BEnvironment%2BSetup%2BWalkthrough">Log In</a></li>
+
+                            </ul>
+        
+    <div id="navigation" class="content-navigation view">
+        <fieldset class="hidden parameters">
+            <input id="pageId" value="15311" type="hidden">
+        </fieldset>
+        <ul class="ajs-menu-bar">
+                                
+                        
+            <li class="normal ajs-menu-item">
+        <a id="action-menu-link" class="action trigger ajs-menu-title" href="#"><span><span>Tools</span></span></a>         <div class="hidden ajs-drop-down">
+                        <ul id="action-menu-link-primary" class="section-primary first">
+                                        <li>
+    
+    <a id="view-attachments-link" href="http://bugs.sakaiproject.org/confluence/pages/viewpageattachments.action?pageId=15311" class="action-view-attachments" accesskey="a">
+                   <span><u>A</u>ttachments (1)</span>            </a>
+</li>
+                                        <li>
+    
+    <a id="action-view-history-link" href="http://bugs.sakaiproject.org/confluence/pages/viewpreviousversions.action?pageId=15311" class="action-view-history">
+                   <span>History</span>            </a>
+</li>
+                            </ul>
+                        <ul id="action-menu-link-secondary" class="section-secondary">
+                                        <li>
+    
+    <a id="view-page-info-link" href="http://bugs.sakaiproject.org/confluence/pages/viewinfo.action?pageId=15311" class="action-view-info" accesskey="i">
+                   <span><u>I</u>nfo</span>            </a>
+</li>
+                                        <li>
+    
+    <a id="action-view-source-link" href="http://bugs.sakaiproject.org/confluence/pages/viewpagesrc.action?pageId=15311" class="action-view-source popup-link">
+                   <span>View Wiki Markup</span>            </a>
+</li>
+                            </ul>
+                    </div>
+    </li>
+            </ul>
+    </div>
+
+    <h1 id="title-heading" class="pagetitle">
+                    <a href="http://bugs.sakaiproject.org/confluence/display/BOOT"><img class="logo global custom" src="Development+Environment+Setup+Walkthrough_files/global.gif" alt=""></a>        
+		<span id="title-text">
+					            <a href="http://bugs.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough">Development Environment Setup Walkthrough</a>
+    				</span>
+    </h1>
+
+    <!--
+    Root decorator: this is a layer of abstraction that Confluence doesn't need. It will be removed eventually.
+-->
+
+
+
+
+    
+    
+
+    
+    
+        
+    
+    
+    
+
+
+<div id="content" class="page view">
+    
+        
+    
+                
+
+        
+        <div class="page-metadata">
+            Added by <a href="http://bugs.sakaiproject.org/confluence/display/%7Eaaronz">Aaron Zeckoski</a>, last edited by <a href="http://bugs.sakaiproject.org/confluence/display/%7Eaaronz">Aaron Zeckoski</a> on May 30, 2008
+                            <span class="noprint">&nbsp;(<a href="http://bugs.sakaiproject.org/confluence/pages/diffpages.action?pageId=15311&amp;originalId=25002209">view change</a>)</span>
+                </div>        
+        <div class="wiki-content">
+           <!-- wiki content -->
+            <h3><a name="DevelopmentEnvironmentSetupWalkthrough-Information"></a>Information</h3>
+<p>This is a walkthrough for setting up a Sakai development environment
+on a laptop or desktop. These instructions will also work for setting
+up a development server though I suggest slightly beefier settings for
+memory. This is currently tailored for Sakai 2.5+. Once you have a
+Sakai development environment setup you should be able to program your
+own Sakai tools or modify existing tools.</p>
+
+<div class="panelMacro"><table class="noteMacro"><colgroup><col width="24"><col></colgroup><tbody><tr><td valign="top"><img src="Development+Environment+Setup+Walkthrough_files/warning.gif" alt="" width="16" align="absmiddle" border="0" height="16"></td><td><b>Notes for developers using Sakai 2.4.x-</b><br>
+<ul>
+	<li>Developers who are using Sakai 2.4.x or lower should use the <a href="http://bugs.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough++%282.2.x-2.4.x%29" title="Development Environment Setup Walkthrough  (2.2.x-2.4.x)">Development Environment Setup Walkthrough  (2.2.x-2.4.x)</a></li>
+</ul>
+</td></tr></tbody></table></div>
+
+<div class="panelMacro"><table class="noteMacro"><colgroup><col width="24"><col></colgroup><tbody><tr><td valign="top"><img src="Development+Environment+Setup+Walkthrough_files/warning.gif" alt="" width="16" align="absmiddle" border="0" height="16"></td><td><b>Notes for windows users</b><br>
+<ul>
+	<li>change the "/" to "\" for all directory paths except those specified in the maven build.properties file</li>
+	<li>add the drive letter (C:) to your paths</li>
+	<li>use %VARIABLE% instead of $VARIABLE with environment variables</li>
+	<li>set your environment variables in Control Panel -&gt; System -&gt; Advanced -&gt; Environment Variables</li>
+</ul>
+</td></tr></tbody></table></div>
+
+<div class="panelMacro"><table class="infoMacro"><colgroup><col width="24"><col></colgroup><tbody><tr><td valign="top"><img src="Development+Environment+Setup+Walkthrough_files/information.gif" alt="" width="16" align="absmiddle" border="0" height="16"></td><td>Zach Thomas has created a screencast which walks developers through setting up their Sakai 2.5 development environment <br>
+<a href="http://aeroplanesoftware.com/wordpress/wp-content/uploads/2008/01/developing-for-sakai-getting-started960x540.mov" rel="nofollow">http://aeroplanesoftware.com/wordpress/wp-content/uploads/2008/01/developing-for-sakai-getting-started960x540.mov</a><br>
+<a href="http://aeroplanesoftware.com/wordpress/wp-content/uploads/2008/02/developing-for-sakai-setting-up-eclipse960x540.mov" rel="nofollow">http://aeroplanesoftware.com/wordpress/wp-content/uploads/2008/02/developing-for-sakai-setting-up-eclipse960x540.mov</a></td></tr></tbody></table></div>
+
+<div class="panelMacro"><table class="tipMacro"><colgroup><col width="24"><col></colgroup><tbody><tr><td valign="top"><img src="Development+Environment+Setup+Walkthrough_files/check.gif" alt="" width="16" align="absmiddle" border="0" height="16"></td><td>All
+of sakai and related programs should be installed in an opt directory
+which you will need full write access to, put this directory anywhere
+you want, this document will assume you have placed it in your root
+directory</td></tr></tbody></table></div>
+<p><br clear="all"></p>
+<ol>
+	<li><h3><a name="DevelopmentEnvironmentSetupWalkthrough-Install/VerifyyouhaveJava1.5InstallJava1.5"></a><a href="http://bugs.sakaiproject.org/confluence/display/BOOT/Install+Java+1.5" title="Install Java 1.5">Install/Verify you have Java 1.5</a></h3>
+<ol>
+	<li>To check: Run <b>java -version</b> on the command line</li>
+	<li>If not correct, download the J2SE SDK from:
+	<ul>
+		<li><a href="http://java.sun.com/j2se/1.5.0/download.jsp" rel="nofollow">http://java.sun.com/j2se/1.5.0/download.jsp</a></li>
+		<li>Mac OS X users will have Java 1.5 by default</li>
+	</ul>
+	</li>
+	<li>Install it (the SDK) to /opt/java
+	<ul>
+		<li><b>Note:</b> Install the JRE to a different directory (probably the default, especially under windows) or you will have problems</li>
+	</ul>
+	</li>
+	<li>Set environment variable: JAVA_HOME=/opt/java
+	<ul>
+		<li>Mac users: JAVA_HOME=/Library/Java/Home</li>
+		<li>Windows users default: JAVA_HOME=C:\j2sdk1.5.0_xx (where "xx" is the minor version - for example "j2sdk1.5.0_11")</li>
+	</ul>
+	</li>
+	<li>Add $JAVA_HOME/bin to PATH</li>
+	<li>Set JAVA_OPTS for tomcat in the tomcat/bin/setenv file (see <a href="http://bugs.sakaiproject.org/confluence/display/BOOT/Install+Tomcat+5.5" title="Install Tomcat 5.5">Install Tomcat 5.5</a>)
+<div class="preformatted panel" style="border-width: 1px;"><div class="preformattedContent panelContent">
+<pre>JAVA_OPTS='-server -XX:+UseParallelGC -Xmx768m -XX:MaxPermSize=128m -Djava.awt.headless=true'
+</pre>
+</div></div>
+	<ul>
+		<li>These settings are for developers</li>
+		<li>More info on JVM tuning: <a href="http://bugs.sakaiproject.org/confluence/display/BOOT/Sakai+2.2+developer+JVM+tuning" title="Sakai 2.2 developer JVM tuning">Sakai 2.2 developer JVM tuning</a></li>
+	</ul>
+	</li>
+</ol>
+</li>
+	<li><h3><a name="DevelopmentEnvironmentSetupWalkthrough-Install/VerifyyouhaveMySQL4.1InstallMySQL4.1"></a><a href="http://bugs.sakaiproject.org/confluence/display/BOOT/Install+MySQL+4.1" title="Install MySQL 4.1">Install/Verify you have MySQL 4.1</a></h3>
+<ul>
+	<li>MySQL - <a href="http://www.mysql.com/" rel="nofollow">http://www.mysql.com</a>
+	<ul>
+		<li>Some
+have reported that MySQL 5.0.x works just fine as well. If you already
+have this version, there's likely no point in downgrading to 4.1.*.</li>
+	</ul>
+	</li>
+</ul>
+<ol>
+	<li>To check: Run <b>mysql --help</b> on the command line</li>
+	<li>If not, download MySQL from:
+	<ul>
+		<li><a href="http://dev.mysql.com/downloads/" rel="nofollow">http://dev.mysql.com/downloads/</a></li>
+	</ul>
+	</li>
+	<li>Custom install to /opt/mysql (options vary slightly based on operating system)
+	<ul>
+		<li>Linux users should install MySQL using a package or binaries if possible</li>
+	</ul>
+	<ol>
+		<li>Choose standard configuration</li>
+		<li>Install as a windows service (Windows only)</li>
+		<li>Launch automatically (recommended)
+		<ul>
+			<li>If you choose not to do this, make sure that you startup MySQL before you try to run Sakai</li>
+		</ul>
+		</li>
+		<li>Include the bin directory in Path</li>
+		<li>Don't use an anonymous account</li>
+		<li>Set your root password to "mysqlpwd1"</li>
+	</ol>
+	</li>
+</ol>
+
+</li>
+	<li><h3><a name="DevelopmentEnvironmentSetupWalkthrough-SetupSakaiDB(schema)anduser"></a>Setup Sakai DB (schema) and user</h3>
+	<ol>
+		<li>Create the sakai database and sakai user (password=ironchef)</li>
+		<li>Run the following from a command line prompt:
+<div class="preformatted panel" style="border-width: 1px;"><div class="preformattedContent panelContent">
+<pre>mysql -uroot -pmysqlpwd1
+</pre>
+</div></div>
+		<ul>
+			<li><b>Note:</b> You can also do the following if you prefer to be prompted for the password: mysql -uroot -p</li>
+		</ul>
+		</li>
+		<li>Then run these commands from the mysql prompt (one command per line):
+<div class="preformatted panel" style="border-width: 1px;"><div class="preformattedContent panelContent">
+<pre>create database sakai default character set utf8;
+grant all privileges on sakai.* to 'sakai'@'localhost' identified by 'ironchef';
+flush privileges;
+quit
+</pre>
+</div></div></li>
+		<li>[Optional] Download and install mysql query browser
+		<ol>
+			<li><a href="http://dev.mysql.com/downloads/query-browser/1.1.html" rel="nofollow">http://dev.mysql.com/downloads/query-browser/1.1.html</a></li>
+			<li>You do not have to do anything with query browser now</li>
+		</ol>
+		</li>
+	</ol>
+	</li>
+	<li><h3><a name="DevelopmentEnvironmentSetupWalkthrough-DownloadandsetupMaven2.0.6InstallMaven2.0.6stablepackage"></a>Download and <a href="http://bugs.sakaiproject.org/confluence/pages/viewpage.action?pageId=1999114" title="Install Maven 2.0.6+">setup Maven 2.0.6+</a> stable package</h3>
+<ul>
+	<li>Maven - <a href="http://maven.apache.org/" rel="nofollow">http://maven.apache.org/</a></li>
+</ul>
+<ol>
+	<li>Download Maven 2.0.x (minimum 2.0.6) - <a href="http://maven.apache.org/download.html" rel="nofollow">http://maven.apache.org/download.html</a></li>
+	<li>Extract to /opt (should create maven-2.0.9 folder)</li>
+	<li>Set environment variable: MAVEN2_HOME=/opt/maven-2.0.9</li>
+	<li>Add $MAVEN2_HOME/bin to PATH\</li>
+	<li>Set the MAVEN_OPTS environment variable
+<div class="preformatted panel" style="border-width: 1px;"><div class="preformattedContent panelContent">
+<pre>MAVEN_OPTS='-Xms256m -Xmx645m -XX:PermSize=64m -XX:MaxPermSize=136m'
+</pre>
+</div></div></li>
+</ol>
+</li>
+	<li><h3><a name="DevelopmentEnvironmentSetupWalkthrough-Install/VerifyyouhaveSubversionInstallSubversion"></a><a href="http://bugs.sakaiproject.org/confluence/display/BOOT/Install+Subversion" title="Install Subversion">Install/Verify you have Subversion</a></h3>
+<ul>
+	<li>Subversion - <a href="http://subversion.tigris.org/" rel="nofollow">http://subversion.tigris.org/</a></li>
+</ul>
+<ol>
+	<li>To check: Run <b>svn --version</b> on the command line
+	<ul>
+		<li><a href="http://subversion.tigris.org/project_packages.html" rel="nofollow">http://subversion.tigris.org/project_packages.html</a></li>
+		<li><b><em>Get the subversion binaries and not the source, if possible</em></b></li>
+		<li>If there are no binaries for your platform, get the source and use the configuration options --with-ssl and --with-libs</li>
+	</ul>
+	</li>
+	<li>Extract to /opt (should create subversion-1.2.3)
+	<ul>
+		<li>Windows users will want to rename the extracted directory</li>
+		<li>Unix users will probably want to use a package for their flavor</li>
+	</ul>
+	</li>
+	<li>Set environment variable: SUBVERSION_HOME=<em>/opt/subversion-1.2.3</em></li>
+	<li>Add $SUBVERSION_HOME/bin to PATH</li>
+</ol>
+</li>
+	<li><h3><a name="DevelopmentEnvironmentSetupWalkthrough-Downloadandsetuptomcat5.5.17(stableonly)InstallTomcat5.5"></a><a href="http://bugs.sakaiproject.org/confluence/display/BOOT/Install+Tomcat+5.5" title="Install Tomcat 5.5">Download and setup tomcat 5.5.17+ (stable only)</a></h3>
+<ul>
+	<li>Apache Tomcat - <a href="http://tomcat.apache.org/" rel="nofollow">http://tomcat.apache.org/</a></li>
+	<li><b>Note:</b> Always do a fresh install of Tomcat</li>
+	<li><b>Note:</b> Windows users should ensure that there are no spaces in the complete tomcat path as this causes errors with JSF tools in Sakai<br>
+<b>GOOD:</b> C:\opt\tomcat\, C:\sakaistuff\installs\tomcat\<br>
+<b>BAD:</b>  C:\program files\tomcat\, C:\opt\apache tomcat 5.5.18\</li>
+</ul>
+<ol>
+	<li>Download tomcat 5.5 - <a href="http://tomcat.apache.org/download-55.cgi" rel="nofollow">http://tomcat.apache.org/download-55.cgi</a>
+	<ul>
+		<li>Windows users should get the zip file instead of installing a service<br>
+It makes viewing the tomcat logs easier and it is easier to configure</li>
+	</ul>
+	</li>
+	<li>Extract to /opt (symlink the apache-tomcat-5.5.x directory to tomcat after extracting)
+	<ul>
+		<li>Windows users should just rename the directory since they cannot symlink</li>
+	</ul>
+	</li>
+	<li>Download the java 1.4.2 compat patch (compat.zip)
+	<ul>
+		<li><b>NOTE:</b> You should NOT install this patch if you are using Sakai 2.4 or higher</li>
+	</ul>
+	</li>
+	<li>Extract the files to the same location as tomcat itself</li>
+	<li>Modify conf/server.xml for international character support
+	<ol>
+		<li>Add URIEncoding="UTF-8" to the Connector element
+		<ul>
+			<li>&lt;Connector port="8080" URIEncoding="UTF-8" ...</li>
+		</ul>
+		</li>
+	</ol>
+	</li>
+	<li>Set environment variable: CATALINA_HOME=/opt/tomcat</li>
+	<li>Add $CATALINA_HOME/bin to PATH</li>
+	<li>Setup the SETENV file in the tomcat/bin directory with JAVA_OPTS (from <a href="http://bugs.sakaiproject.org/confluence/display/BOOT/Install+Java+1.5" title="Install Java 1.5">Install Java 1.5</a>)
+	<ol>
+		<li>Mac/Linux: Create a file called <b>setenv.sh</b> with the following:
+<div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
+<pre class="code-java">export JAVA_OPTS=<span class="code-quote">"-server -XX:+UseParallelGC -Xmx768m -XX:MaxPermSize=160m -Djava.awt.headless=<span class="code-keyword">true</span>"</span></pre>
+</div></div></li>
+		<li>Windows(PC): Create a file called <b>setenv.bat</b> with the following:
+<div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
+<pre class="code-java">set JAVA_OPTS=-server -XX:+UseParallelGC -Xmx768m -XX:MaxPermSize=160m -Djava.awt.headless=<span class="code-keyword">true</span></pre>
+</div></div></li>
+	</ol>
+	</li>
+</ol>
+
+
+</li>
+	<li><h3><a name="DevelopmentEnvironmentSetupWalkthrough-DownloadandsetupMySQLConnector/JstableInstallMysqlConnector3.1"></a><a href="http://bugs.sakaiproject.org/confluence/display/BOOT/Install+Mysql+Connector+3.1" title="Install Mysql Connector 3.1">Download and setup MySQL Connector/J stable</a></h3>
+<ul>
+	<li>Mysql Connector J - <a href="http://www.mysql.com/products/connector/j/" rel="nofollow">http://www.mysql.com/products/connector/j/</a></li>
+</ul>
+<ol>
+	<li>Download connector for your version of MySQL
+	<ol>
+		<li>If running mySQL 4.1<br>
+Download version 3.1.12+ from <a href="http://dev.mysql.com/downloads/connector/j/3.1.html" rel="nofollow">http://dev.mysql.com/downloads/connector/j/3.1.html</a></li>
+		<li>If running MySQL 5.0.x<br>
+Download version 5.0.4+ from <a href="http://dev.mysql.com/downloads/connector/j/5.0.html" rel="nofollow">http://dev.mysql.com/downloads/connector/j/5.0.html</a></li>
+	</ol>
+	</li>
+	<li>Extract the file to /opt</li>
+	<li>Copy mysql-connector-java-&lt;version&gt;-bin.jar to $CATALINA_HOME/common/lib</li>
+	<li>Delete the extracted folder</li>
+</ol>
+</li>
+	<li><h3><a name="DevelopmentEnvironmentSetupWalkthrough-UseSubversiontodownloadsakaicafetrunk"></a>Use Subversion to download sakai cafe trunk</h3>
+	<ol>
+		<li>Change to the /opt directory</li>
+		<li>svn checkout <a href="https://source.sakaiproject.org/svn/cafe/trunk/" rel="nofollow">https://source.sakaiproject.org/svn/cafe/trunk/</a> cafe_trunk
+		<ol>
+			<li>If you want a version other than this one, browse the tags and branches at <a href="https://source.sakaiproject.org/svn/cafe/" rel="nofollow">https://source.sakaiproject.org/svn/cafe/</a></li>
+			<li>subversion will create a "trunk" directory for you,<br>
+you can use any directory name you like, just add a name after the checkout location:<br>
+svn checkout <a href="https://source.sakaiproject.org/svn/cafe/trunk/" rel="nofollow">https://source.sakaiproject.org/svn/cafe/trunk/</a> cafe-trunk</li>
+		</ol>
+		</li>
+		<li>Checkout will take about 5-10 minutes</li>
+		<li>The directory created by subversion will be referred to as &lt;sakai-src&gt; directory</li>
+	</ol>
+	</li>
+	<li><h3><a name="DevelopmentEnvironmentSetupWalkthrough-Setupsakai.propertiesfile"></a>Setup sakai.properties file</h3>
+	<ol>
+		<li>Create <b>sakai</b> directory in $CATALINA_HOME
+		<ul>
+			<li>$CATALINA_HOME should be /opt/tomcat if you have been following these instructions</li>
+			<li>Note:
+There were previously two configuration files, sakai.properties and
+placeholder.properties. These have now been combined into
+sakai.properties. You can attempt to manually combine the two files
+from a previous version, but it's better to start with the sample
+included with the sakai source in the reference directory.</li>
+		</ul>
+		</li>
+		<li>Copy sakai.properties from &lt;sakai-src&gt;/reference/docs to $CATALINA_HOME/sakai
+		<ul>
+			<li>Note:
+This file may not be in your checkout if you have acquired one of the
+older versions of cafe - you can fetch it manually from here <a href="https://source.sakaiproject.org/svn/reference/trunk/docs/sakai.properties" rel="nofollow">https://source.sakaiproject.org/svn/reference/trunk/docs/sakai.properties</a>.<br>
+Make sure you get the sakai.properties for the version of Sakai you are using (e.g. Sakai 2.4.x):<br>
+<a href="http://source.sakaiproject.org/svn/reference/branches/sakai_2-4-x/docs/sakai.properties" rel="nofollow">http://source.sakaiproject.org/svn/reference/branches/sakai_2-4-x/docs/sakai.properties</a></li>
+		</ul>
+		</li>
+		<li>Edit the sakai.properties file for a MySQL dev environment. Starting at the section <b># DATABASE CONFIGURATION</b>:
+		<ol>
+			<li>Set BaseDataSource username
+			<ol>
+				<li>Set username@javax.sql.BaseDataSource=sakai</li>
+			</ol>
+			</li>
+			<li>Set BaseDataSource password
+			<ol>
+				<li>Set password@javax.sql.BaseDataSource=ironchef</li>
+			</ol>
+			</li>
+			<li>Find the section: <b>## HSQLDB settings</b> and comment out 7+ lines in it
+<div class="preformatted panel" style="border-width: 1px;"><div class="preformattedContent panelContent">
+<pre>## HSQLDB settings - on by default
+#vendor@org.sakaiproject.service.framework.sql.SqlService=hsqldb
+#driverClassName@javax.sql.BaseDataSource=org.hsqldb.jdbcDriver
+#hibernate.dialect=org.hibernate.dialect.HSQLDialect
+#validationQuery@javax.sql.BaseDataSource=select 1 from SYSTEM_USERS
+# two hsqldb storage options: first for in-memory (no persistence between runs), second for disk based
+#url@javax.sql.BaseDataSource=jdbc:hsqldb:.
+#url@javax.sql.BaseDataSource=jdbc:hsqldb:${sakai.home}/db/sakai.db
+</pre>
+</div></div></li>
+			<li>Find the section: <b>## MySQL settings</b> and uncomment the 6+ lines in it
+<div class="preformatted panel" style="border-width: 1px;"><div class="preformattedContent panelContent">
+<pre>## MySQL settings - make sure to alter as appropriate
+vendor@org.sakaiproject.db.api.SqlService=mysql
+driverClassName@javax.sql.BaseDataSource=com.mysql.jdbc.Driver
+hibernate.dialect=org.hibernate.dialect.MySQLDialect
+url@javax.sql.BaseDataSource=jdbc:mysql://127.0.0.1:3306/sakai?useUnicode=true&amp;characterEncoding=UTF-8
+validationQuery@javax.sql.BaseDataSource=select 1 from DUAL
+defaultTransactionIsolationString@javax.sql.BaseDataSource=TRANSACTION_READ_COMMITTED
+</pre>
+</div></div></li>
+		</ol>
+		<ul>
+			<li>Note that this line may be incorrect in the default file, it should read as shown:
+<div class="preformatted panel" style="border-width: 1px;"><div class="preformattedContent panelContent">
+<pre>vendor@org.sakaiproject.db.api.SqlService=mysql
+</pre>
+</div></div></li>
+		</ul>
+		</li>
+		<li>Save the changes to the file</li>
+	</ol>
+	</li>
+	<li><h3><a name="DevelopmentEnvironmentSetupWalkthrough-Createmavensettings.xmlfileMaven2.xsettings.xmlfile"></a><a href="http://bugs.sakaiproject.org/confluence/display/BOOT/Maven+2.x+settings.xml+file" title="Maven 2.x settings.xml file">Create maven settings.xml file</a></h3>
+<ol>
+	<li>Create a new xml file in your user home directory in the <b>.m2</b> directory called <b>settings.xml</b>
+	<ul>
+		<li><b>Note:</b> This is probably c:\documents and settings\&lt;username&gt; in Windows</li>
+		<li><a href="http://bugs.sakaiproject.org/confluence/download/attachments/1999035/settings.xml?version=1">Download a sample settings.xml file</a> (setup for windows users)</li>
+	</ul>
+	</li>
+	<li>Add the following lines:
+<div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
+<pre class="code-xml">&lt;settings xmlns=<span class="code-quote">"http://maven.apache.org/POM/4.0.0"</span>
+   <span class="code-keyword">xmlns:xsi</span>=<span class="code-quote">"http://www.w3.org/2001/XMLSchema-instance"</span>
+   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/settings-1.0.0.xsd"&gt;
+  <span class="code-tag">&lt;profiles&gt;</span>
+    <span class="code-tag">&lt;profile&gt;</span>
+      <span class="code-tag">&lt;id&gt;</span>tomcat5x<span class="code-tag">&lt;/id&gt;</span> 
+      <span class="code-tag">&lt;activation&gt;</span>
+        <span class="code-tag">&lt;activeByDefault&gt;</span>true<span class="code-tag">&lt;/activeByDefault&gt;</span> 
+      <span class="code-tag">&lt;/activation&gt;</span>
+      <span class="code-tag">&lt;properties&gt;</span>
+        <span class="code-tag">&lt;appserver.id&gt;</span>tomcat5x<span class="code-tag">&lt;/appserver.id&gt;</span> 
+        <span class="code-tag">&lt;appserver.home&gt;</span>/opt/tomcat<span class="code-tag">&lt;/appserver.home&gt;</span> 
+        <span class="code-tag">&lt;maven.tomcat.home&gt;</span>/opt/tomcat<span class="code-tag">&lt;/maven.tomcat.home&gt;</span> 
+        <span class="code-tag">&lt;sakai.appserver.home&gt;</span>/opt/tomcat<span class="code-tag">&lt;/sakai.appserver.home&gt;</span> 
+        <span class="code-tag">&lt;surefire.reportFormat&gt;</span>plain<span class="code-tag">&lt;/surefire.reportFormat&gt;</span>
+        <span class="code-tag">&lt;surefire.useFile&gt;</span>false<span class="code-tag">&lt;/surefire.useFile&gt;</span>
+      <span class="code-tag">&lt;/properties&gt;</span>
+    <span class="code-tag">&lt;/profile&gt;</span>
+  <span class="code-tag">&lt;/profiles&gt;</span>
+<span class="code-tag">&lt;/settings&gt;</span></pre>
+</div></div>
+	<ul>
+		<li><b>Note:</b> Unfortunately, Sakai does not use the standard appserver.home so you have to specify a sakai.appserver.home</li>
+		<li><b>Note:</b> The sakai.appserver.home must be <em>C:\opt\tomcat</em> for windows users</li>
+		<li><b>Note:</b> Do not include trailing / or \ slashes in the directory paths</li>
+	</ul>
+	</li>
+</ol>
+<ul>
+	<li>(optional) You can specify the tomcat home to be an environment variable like so:
+<div class="preformatted panel" style="border-width: 1px;"><div class="preformattedContent panelContent">
+<pre>      &lt;maven.tomcat.home&gt;${env.CATALINA_HOME}&lt;/maven.tomcat.home&gt;
+</pre>
+</div></div></li>
+	<li>(optional) Users who use a network proxy need to add the following to their file
+<div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
+<pre class="code-xml">...
+  <span class="code-tag">&lt;proxies&gt;</span>
+     <span class="code-tag">&lt;proxy&gt;</span>
+        <span class="code-tag">&lt;active&gt;</span>true<span class="code-tag">&lt;/active&gt;</span>
+        <span class="code-tag">&lt;protocol&gt;</span>http<span class="code-tag">&lt;/protocol&gt;</span>
+        <span class="code-tag">&lt;host&gt;</span>www.your.proxy.host<span class="code-tag">&lt;/host&gt;</span>
+        <span class="code-tag">&lt;port&gt;</span>80<span class="code-tag">&lt;/port&gt;</span>
+        <span class="code-tag">&lt;username&gt;</span>your_username<span class="code-tag">&lt;/username&gt;</span>
+        <span class="code-tag">&lt;password&gt;</span>your_password<span class="code-tag">&lt;/password&gt;</span>
+        <span class="code-tag">&lt;nonProxyHosts&gt;</span>localhost<span class="code-tag">&lt;/nonProxyHosts&gt;</span>
+     <span class="code-tag">&lt;/proxy&gt;</span>
+  <span class="code-tag">&lt;/proxies&gt;</span>
+<span class="code-tag">&lt;/settings&gt;</span></pre>
+</div></div>
+	<ul>
+		<li>If you do not use a username or password for your proxy just leave out those 2 lines</li>
+		<li>You only need the nonProxyHosts option if you have a local maven repo that does not require the proxy to be accessed</li>
+		<li><b>Note:</b>
+Maven 2 doesn't support Microsoft's NTLN authentification scheme. If
+you connect to a proxy like ISA you will need to use a tool, such as <a href="http://ntlmaps.sourceforge.net/" rel="nofollow">http://ntlmaps.sourceforge.net/</a> to proxy your traffic</li>
+	</ul>
+	</li>
+</ul>
+</li>
+	<li><h3><a name="DevelopmentEnvironmentSetupWalkthrough-UseMaventobuildSakai"></a>Use Maven to build Sakai</h3>
+	<ol>
+		<li>Open a command line shell</li>
+		<li>Change directory to /opt/&lt;sakai-src&gt;</li>
+		<li>Execute <b>mvn clean install</b> to build Sakai using maven
+		<ul>
+			<li>Note: The build will take an extra 5-10 minutes to download dependencies the first time</li>
+		</ul>
+		</li>
+		<li>Execute <b>mvn sakai:deploy</b> to deploy Sakai to your tomcat using maven</li>
+		<li>Unlike
+in maven1, the maven2 Sakai plugin downloads automatically (this allows
+you to deploy the parts of projects to the right locations in tomcat)</li>
+		<li>Partial builds are supported by the maven2 build system<br>
+You can now do a "mvn clean install sakai:deploy" from any subdirectory and build just that code </li>
+		<li>Once you have downloded the jars you can run maven off-line with <b>mvn -o clean install sakai:deploy</b></li>
+	</ol>
+	</li>
+	<li><h3><a name="DevelopmentEnvironmentSetupWalkthrough-StartTomcatandchecktomakesureSakairuns"></a>Start Tomcat and check to make sure Sakai runs</h3>
+	<ol>
+		<li>Start tomcat using $CATALINA_HOME/bin/startup</li>
+		<li>Allow 1 minute+ for tomcat to start up</li>
+		<li>Open <a href="http://localhost:8080/" rel="nofollow">http://localhost:8080/</a> to verify tomcat is running</li>
+		<li>Open <a href="http://localhost:8080/portal" rel="nofollow">http://localhost:8080/portal</a> to verify sakai is running</li>
+		<li>Login to sakai as username:admin, password:admin</li>
+		<li>Shutdown Tomcat using $CATALINA_HOME/bin/shutdown</li>
+	</ol>
+	</li>
+	<li><h3><a name="DevelopmentEnvironmentSetupWalkthrough-InstallEclipse3.2stableInstallEclipse3.2"></a><a href="http://bugs.sakaiproject.org/confluence/pages/viewpage.action?pageId=17028" title="Install Eclipse 3.2+">Install Eclipse 3.2+ stable</a></h3>
+<ul>
+	<li>Eclipse - <a href="http://www.eclipse.org/" rel="nofollow">http://www.eclipse.org/</a>
+	<ul>
+		<li>Note:
+If you already have eclipse 3.1.x installed, your best best is to start
+over with a fresh install rather than attempting to upgrade</li>
+		<li>Note: If you have not installed eclipse already, you should download the <a href="http://www.eclipse.org/webtools/" rel="nofollow">WebTools</a>
+Platform: All-in-one package for Eclipse 3.3+ which includes Eclipse
+and all of the necessary webtools packages, this is much faster and
+easier than downloading them seperately, you can skip the WebTools step
+if you do this, here are instructions to <a href="http://bugs.sakaiproject.org/confluence/display/BOOT/Install+Eclipse+WTP" title="Install Eclipse WTP">install the Eclipse WebTools</a></li>
+	</ul>
+	</li>
+</ul>
+<ol>
+	<li>Download the newest stable version <a href="http://www.eclipse.org/" rel="nofollow">http://www.eclipse.org/</a></li>
+	<li>Extract the downloaded file to /opt
+	<ul>
+		<li>Windows users should extract to c:\</li>
+		<li>Mac users should use the installer and put it in Applications</li>
+	</ul>
+	</li>
+	<li>Run eclipse to verify it works (<b>/opt/eclipse/eclipse</b>)
+	<ul>
+		<li>Windows users: c:\eclipse\eclipse.exe to run eclipse</li>
+		<li>Note: If it does not work, there is probably a problem with your java install</li>
+	</ul>
+	</li>
+	<li>Set the memory settings for Eclipse
+	<ul>
+		<li>The default memory settings for Eclipse are much too low to handle the number of webapps in a full Sakai installation</li>
+	</ul>
+	<ol>
+		<li>Shutdown eclipse if it is running</li>
+		<li>Edit the eclipse.ini file in the directory you extracted/installed eclipse</li>
+		<li>Change the settings from something like this:
+<div class="preformatted panel" style="border-width: 1px;"><div class="preformattedContent panelContent">
+<pre>-vmargs
+-Xms40m
+-Xmx256m
+</pre>
+</div></div>
+<p>to something like this (leave any params that do not match these alone):</p>
+<div class="preformatted panel" style="border-width: 1px;"><div class="preformattedContent panelContent">
+<pre>--launcher.XXMaxPermSize
+256M
+-vmargs
+-Xms128m
+-Xmx1024m
+-XX:+UseParallelGC 
+</pre>
+</div></div>
+		<ul>
+			<li>Windows users should not use notepad to edit this file, use wordpad or edit (command line)</li>
+			<li>Mac users will need to take additional steps to edit the eclipse.ini file</li>
+		</ul>
+		<ol>
+			<li>Control-click on the Eclipse Application icon and select <b>Show Package Contents</b></li>
+			<li>Double-click on the <b>Contents</b> folderD</li>
+			<li>Double-click on the <b>MacOS</b> folder, the eclipse.ini file should be here</li>
+			<li>Full path: eclipse/Eclipse.app/Contents/MacOS/eclipse.ini</li>
+		</ol>
+		</li>
+	</ol>
+	</li>
+	<li>Set the JVM
+	<ul>
+		<li>The default JVM will be the one in the JRE, things will work better if you change this to the one in the J2SE</li>
+	</ul>
+	<ol>
+		<li>Startup eclipse if it is not running</li>
+		<li>Select <b>Window -&gt; Preferences -&gt; Java -&gt; Installed JREs</b></li>
+		<li>Select the current installed JRE</li>
+		<li>Click the <b>Edit</b> button</li>
+		<li>Click <b>Browse</b> and navigate to the home directory of your JAVA installation (e.g. /opt/java)</li>
+		<li>Click <b>OK</b> to save and then OK to Finish
+		<ul>
+			<li>Running Eclipse with a different JVM from the default<br>
+Add <tt>-vm /opt/java/bin/java</tt> after the eclipse executable</li>
+			<li>You must include the full path to the java executable file</li>
+		</ul>
+		</li>
+	</ol>
+	</li>
+</ol>
+<ul>
+	<li>More Eclipse tips here: <a href="http://bugs.sakaiproject.org/confluence/display/%7Earwhyte/Eclipse+notes" title="Eclipse notes">Eclipse notes</a></li>
+</ul>
+</li>
+	<li><h3><a name="DevelopmentEnvironmentSetupWalkthrough-AddEclipseWebToolsProject(WTP)InstallEclipseWTP"></a>Add <a href="http://bugs.sakaiproject.org/confluence/display/BOOT/Install+Eclipse+WTP" title="Install Eclipse WTP">Eclipse Web Tools Project (WTP)</a></h3>
+<ul>
+	<li>Web Tools Project - <a href="http://www.eclipse.org/webtools/" rel="nofollow">http://www.eclipse.org/webtools/</a></li>
+	<li><b>NOTE:</b>
+Installing the all-in-one-package or manually installing are far more
+reliable and definitely recommended over using the updater method (the
+last one)</li>
+	<li><b>NOTE:</b> Only install released versions, the development versions tend to be unstable and buggy</li>
+</ul>
+<ol>
+	<li>WebTools Platform: All-in-one (fastest, recommended)
+	<ul>
+		<li>This should only be used if you do not already have Eclipse installed</li>
+	</ul>
+	<ol>
+		<li>Go to <a href="http://www.eclipse.org/downloads/" rel="nofollow">eclipse downloads</a>
+		<ul>
+			<li>Older versions at <a href="http://download.eclipse.org/webtools/downloads/" rel="nofollow">WTP downloads</a></li>
+		</ul>
+		</li>
+		<li>Click <b>Eclipse IDE for Java EE Developers</b> and choose a download mirror</li>
+		<li>Extract the package to whereever you want to install eclipse (normally your drive root /eclipse)</li>
+		<li>Adjust the config as indicated in <a href="http://bugs.sakaiproject.org/confluence/pages/viewpage.action?pageId=17028" title="Install Eclipse 3.2+">Install Eclipse 3.2+</a></li>
+		<li>Startup Eclipse</li>
+	</ol>
+	</li>
+	<li>Manual installation (faster)
+	<ul>
+		<li><a href="http://www.eclipse.org/webtools/downloads/" rel="nofollow">http://www.eclipse.org/webtools/downloads/</a></li>
+	</ul>
+	<ol>
+		<li>Download WTP 1.5.x (Eclipse 3.2) or 2.0.x (Eclipse 3.3) to your desktop</li>
+		<li>Shutdown Eclipse</li>
+		<li>Extract the package to your Eclipse installation directory</li>
+		<li>Startup Eclipse</li>
+	</ol>
+	</li>
+	<li>Install using the Eclipse updater (somewhat easier but not recommended)
+	<ol>
+		<li>Start eclipse</li>
+		<li>Select <b>Help -&gt; Software Updates -&gt; Find and Install</b></li>
+		<li>Select <b>Search for new features to install</b>, click Next</li>
+		<li>Choose the <b>Eclipse.org Update Site</b> (or <b>The Eclipse Project Updates</b>) and click <b>Finish</b></li>
+		<li>Select <b>WTP</b> 0.7 (or newer)
+		<ul>
+			<li>Note: If it is not listed, use the following update URL:<br>
+<a href="http://download.eclipse.org/webtools/updates/" rel="nofollow">http://download.eclipse.org/webtools/updates/</a></li>
+		</ul>
+		</li>
+		<li>Click <b>Select Required</b></li>
+		<li>Click <b>Next</b> and follow installation instructions</li>
+		<li>Accept terms, click <b>Finish</b></li>
+		<li>Click <b>Install All</b></li>
+		<li>Restart the workbench when asked</li>
+	</ol>
+	</li>
+</ol>
+</li>
+	<li><h3><a name="DevelopmentEnvironmentSetupWalkthrough-AddsubclipseInstallSubclipsetoEclipse"></a>Add <a href="http://bugs.sakaiproject.org/confluence/display/BOOT/Install+Subclipse" title="Install Subclipse">subclipse</a> to Eclipse</h3>
+<ul>
+	<li>Subclipse - <a href="http://subclipse.tigris.org/" rel="nofollow">http://subclipse.tigris.org/</a></li>
+</ul>
+<ol>
+	<li>Startup eclipse</li>
+	<li>Select <b>Help -&gt; Software Updates -&gt; Find and Install</b></li>
+	<li>Select <b>Search for new features to install</b>, click Next</li>
+	<li>Click <b>New Remote Site</b></li>
+	<li>Enter <b>Subclipse</b> for the name</li>
+	<li>Enter <a href="http://subclipse.tigris.org/update_1.4.x" rel="nofollow">http://subclipse.tigris.org/update_1.4.x</a> for the URL
+	<ul>
+		<li>If you are using Eclipse 3.1 or older, you must use <a href="http://subclipse.tigris.org/update_1.0.x" rel="nofollow">http://subclipse.tigris.org/update_1.0.x</a> instead<br>
+<b>Note:</b> We highly recommend you upgrade to eclipse 3.2+</li>
+	</ul>
+	</li>
+	<li>Click <b>Finish</b></li>
+	<li>Check the Subclipse box and click Next
+	<ul>
+		<li>Ignore the integrations unless you have a need for them, they can stop the install from working</li>
+	</ul>
+	</li>
+	<li>Accept terms, click Next, click <b>Finish</b>, click <b>Install All</b></li>
+	<li>Restart the workbench when asked</li>
+</ol>
+<ul>
+	<li><a href="http://bugs.sakaiproject.org/confluence/display/BOOT/Add+bin+and+target+to+global+svn+ignore+in+Eclipse" title="Add bin and target to global svn ignore in Eclipse">Add bin and target to global svn ignore in Eclipse</a>  (Optional)
+<ul>
+	<li>This will keep you from committing bin and target directory files when you add projects to svn</li>
+</ul>
+<ol>
+	<li>Click on <b>Window -&gt; Preferences</b></li>
+	<li>Select <b>Team -&gt; Ignored Resources</b></li>
+	<li>Click on <b>Add Pattern</b> and enter "bin"</li>
+	<li>Click on <b>Add Pattern</b> and enter "target"</li>
+	<li>Click on <b>Add Pattern</b> and enter "m2-target"</li>
+	<li>Click on <b>Apply</b> and then <b>OK</b></li>
+</ol>
+</li>
+</ul>
+</li>
+	<li><h3><a name="DevelopmentEnvironmentSetupWalkthrough-AddSpringIDEInstallSpringIDEtoEclipse"></a>Add <a href="http://bugs.sakaiproject.org/confluence/display/BOOT/Install+SpringIDE" title="Install SpringIDE">SpringIDE</a> to Eclipse</h3>
+<ul>
+	<li>SpringIDE - <a href="http://springide.org/blog" rel="nofollow">http://springide.org/blog</a></li>
+</ul>
+<ol>
+	<li>Startup Eclipse</li>
+	<li>Select <b>Help -&gt; Software Updates -&gt; Find and Install</b></li>
+	<li>Select <b>Search for new features to install</b>, click <b>Next</b></li>
+	<li>Click <b>New Remote Site</b></li>
+	<li>Enter <b>Spring IDE updatesite</b> for the Name</li>
+	<li>Enter <a href="http://springide.org/updatesite" rel="nofollow">http://springide.org/updatesite</a> for the URL</li>
+	<li>Click <b>OK</b></li>
+	<li>Check the box marked "Spring IDE updatesite" and click <b>Finish</b></li>
+	<li>Check the Spring IDE box and click <b>Next</b>
+	<ul>
+		<li>Ignore the integrations unless you have a need for them, they can stop the install from working</li>
+	</ul>
+	</li>
+	<li>Accept terms, click Next, click <b>Finish</b>, click <b>Install All</b></li>
+	<li>Restart the workbench when asked</li>
+</ol>
+</li>
+	<li><h3><a name="DevelopmentEnvironmentSetupWalkthrough-ImportSakaisourcecodeintoEclipseImportSakaisourceintoEclipse"></a><a href="http://bugs.sakaiproject.org/confluence/display/BOOT/Import+Sakai+source+into+Eclipse" title="Import Sakai source into Eclipse">Import Sakai source code into Eclipse</a></h3>
+<ol>
+	<li>Startup eclipse if it is not running</li>
+	<li>Create a new workspace for Sakai
+	<ol>
+		<li>Click on File -&gt; Switch Workspace</li>
+		<li>Enter "WS-Sakai" in place of the default "workspace" directory</li>
+		<li>Click <b>OK</b> (eclipse will restart)
+		<ul>
+			<li>The following steps should be done in the <b>WS-Sakai</b> workspace</li>
+		</ul>
+		</li>
+	</ol>
+	</li>
+	<li>Add Maven Repository libraries to classpath
+	<ol>
+		<li>Select Window -&gt; Preferences -&gt; Java -&gt; Build Path -&gt; Classpath Variables</li>
+		<li>Add MAVEN_REPO classpath variable with the path to the local maven repository (Sakai 2.4 or lower)
+		<ul>
+			<li>The path should be: $USER_HOME/.maven/repository</li>
+		</ul>
+		</li>
+		<li>Add M2_REPO classpath variable with the path to the local maven repository (Sakai 2.5 or higher)
+		<ul>
+			<li>The path should be: $USER_HOME/.m2/repository</li>
+		</ul>
+		</li>
+	</ol>
+	</li>
+	<li>Switch to the Java perspective (Window -&gt; Open Perspective -&gt; Java)
+	<ul>
+		<li>Make sure you are in the package explorer</li>
+	</ul>
+	</li>
+	<li>Turn off Automatic builds
+	<ul>
+		<li>Select Project and uncheck <b>Build automatically</b></li>
+	</ul>
+	</li>
+	<li>Select File -&gt; Import -&gt; Existing Projects into Workspace
+	<ol>
+		<li>Enter the full path to the sakai source directory for the root directory
+		<ul>
+			<li>This should be /opt/cafe-2.2.x if you followed the steps in this document</li>
+		</ul>
+		</li>
+		<li>Click <b>Deselect All</b> to unselect all projects</li>
+		<li>Select the following projects (you only need most of the APIs, a few utils, and all of the db projects)<br>
+alias-api<br>
+announcement-api<br>
+archive-api<br>
+authz-api<br>
+component-api<br>
+content-api<br>
+courier-api<br>
+cm-api<br>
+db-api<br>
+db-impl<br>
+db-util<br>
+entity-api<br>
+email-api<br>
+event-api<br>
+jsf<br>
+message-api<br>
+master<br>
+site-api<br>
+site-manage-api<br>
+tool-api<br>
+user-api<br>
+user-util<br>
+util-api<br>
+util-util<br>
+velocity
+		<ul>
+			<li>NOTE: You can just import all the projects also, this tends to work fine for me</li>
+		</ul>
+		</li>
+		<li>Click Finish to import the selected projects
+		<ul>
+			<li>This will take awhile, probably 5+ minutes</li>
+		</ul>
+		</li>
+	</ol>
+	</li>
+	<li>Create a working set for Sakai (optional)
+	<ul>
+		<li><em>You do not have to create a working set, these are here in case you want to</em></li>
+	</ul>
+	<ol>
+		<li>Switch to the Java perspective</li>
+		<li>In the Package Explorer pane click the drop-down arrow menu and choose <b>Select Working Set</b></li>
+		<li>Click the <b>New</b> button from the Select Working Set Dialog window</li>
+		<li>Choose Java for the Working Set Type and click <b>Next</b></li>
+		<li>Enter <b>Sakai</b> as the name for your Working Set</li>
+		<li>Select the imported Sakai projects and click Finish</li>
+	</ol>
+	</li>
+	<li>Build Sakai in Eclipse
+	<ul>
+		<li>Initially
+you will get build failures on almost every Sakai project, this is
+because they are building in the default order and their dependencies
+are in a different order, this has been partially addressed in Sakai 2.2</li>
+	</ul>
+	<ol>
+		<li>Clean all Sakai projects
+		<ol>
+			<li>Select Project -&gt; Clean</li>
+			<li>Select <b>Clean all projects</b></li>
+			<li>Check <b>Start a build immediately</b></li>
+			<li>Click <b>OK</b></li>
+		</ol>
+		</li>
+		<li>Build All (Project -&gt; Build All)
+		<ul>
+			<li>Do this if using working sets:<br>
+Build the Sakai working set (Select Project -&gt; Build Working Set -&gt; Sakai)</li>
+			<li>Repeat this step until no errors remain (should be no more than 3-4 times)</li>
+			<li>There will be hundreds of warnings, do not worry about these</li>
+		</ul>
+		</li>
+	</ol>
+	</li>
+	<li>Turn back on Automatic builds
+	<ul>
+		<li>Select Project and check <b>Build automatically</b></li>
+	</ul>
+	</li>
+</ol>
+</li>
+</ol>
+        </div>
+
+        <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+    rdf:about="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough"
+    dc:identifier="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough"
+    dc:title="Development Environment Setup Walkthrough"
+    trackback:ping="http://confluence.sakaiproject.org/confluence/rpc/trackback/15311"/>
+</rdf:RDF>
+-->
+
+        
+
+
+
+
+
+
+
+<fieldset class="hidden parameters">
+    <legend>Labels parameters</legend>
+    <input id="editLabel" value="Edit" type="hidden">
+    <input id="addLabel" value="Add Labels" type="hidden">
+    <input id="domainName" value="http://confluence.sakaiproject.org/confluence" type="hidden">
+    <input id="pageId" value="15311" type="hidden">
+    <input id="spaceKey" value="BOOT" type="hidden">
+</fieldset>
+
+<div id="labels-section" class="pageSection">
+    <div id="default-labels-header" class="section-header">
+        <h2 id="labels-section-title" class="section-title hidden">Labels</h2>
+            </div>
+
+    <div class="labels-editor">
+        <div id="labelsList">
+                    </div>
+
+        <span class="errorMessage error" id="errorSpan"></span>
+        <form method="get" action="" id="add-labels-form">
+            <div id="labelInputSpan" class="labels-input">
+                <div id="labelOperationErrorContainer" class="hidden">
+                    <span class="error"><span class="errorMessage" id="labelOperationErrorMessage"></span></span>
+                </div>
+
+                <div class="caption">Enter labels to add to this page:</div>
+
+                <input autocomplete="off" id="labelsString" name="labelsString" value="" size="40">
+                <input class="add-labels" value="Add" type="submit">
+                <input class="hide-labels-editor" value="Done" type="submit">
+                <div id="waitImageAndStatus">
+                    <img class="waiting" alt="Please wait" src="Development+Environment+Setup+Walkthrough_files/wait.gif">&nbsp;
+                    <span id="labelOperationStatus" class="smalltext"></span>
+                </div>
+                <div style="display: none;" class="auto_complete" id="labelsAutocompleteList"></div>
+                <div class="labels-tip">
+                    <div id="suggestedLabelsSpan"></div>
+                    Looking for a label? Just start typing.
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+                    <div id="children-section" class="pageSection">
+        
+        <div class="section-header">
+            <h2 id="children-section-title" class="section-title">
+                <a name="children">Children (7)</a>
+            </h2>
+            <span class="noprint">
+                &nbsp;
+                                    <a id="hide-children-link" class="grey" href="http://bugs.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?showChildren=false#children">Hide Children</a>
+                
+                &nbsp;|&nbsp; <a class="grey" href="http://bugs.sakaiproject.org/confluence/pages/listpages-dirview.action?key=BOOT&amp;openId=15311#selectedPageInHierarchy">View in Hierarchy</a>
+                            </span>
+        </div>
+                    <div id="page-children" class="pageSectionBody">
+                                                     <img src="Development+Environment+Setup+Walkthrough_files/docs_16.gif" title="Install Java 1.4.2" width="16" align="absmiddle" border="0" height="16">
+                         <a href="http://bugs.sakaiproject.org/confluence/display/BOOT/Install+Java+1.4.2">Install Java 1.4.2</a>
+                             <br>
+                                                     <img src="Development+Environment+Setup+Walkthrough_files/docs_16.gif" title="Install Java 1.5" width="16" align="absmiddle" border="0" height="16">
+                         <a href="http://bugs.sakaiproject.org/confluence/display/BOOT/Install+Java+1.5">Install Java 1.5</a>
+                             <br>
+                                                     <img src="Development+Environment+Setup+Walkthrough_files/docs_16.gif" title="Install Maven 1.0.2" width="16" align="absmiddle" border="0" height="16">
+                         <a href="http://bugs.sakaiproject.org/confluence/display/BOOT/Install+Maven+1.0.2">Install Maven 1.0.2</a>
+                             <br>
+                                                     <img src="Development+Environment+Setup+Walkthrough_files/docs_16.gif" title="Install Maven 2.0.6+" width="16" align="absmiddle" border="0" height="16">
+                         <a href="http://bugs.sakaiproject.org/confluence/pages/viewpage.action?pageId=1999114">Install Maven 2.0.6+</a>
+                             <br>
+                                                     <img src="Development+Environment+Setup+Walkthrough_files/docs_16.gif" title="Install MySQL 4.1" width="16" align="absmiddle" border="0" height="16">
+                         <a href="http://bugs.sakaiproject.org/confluence/display/BOOT/Install+MySQL+4.1">Install MySQL 4.1</a>
+                             <br>
+                                                     <img src="Development+Environment+Setup+Walkthrough_files/docs_16.gif" title="Install Mysql Connector 3.1" width="16" align="absmiddle" border="0" height="16">
+                         <a href="http://bugs.sakaiproject.org/confluence/display/BOOT/Install+Mysql+Connector+3.1">Install Mysql Connector 3.1</a>
+                             <br>
+                                                     <img src="Development+Environment+Setup+Walkthrough_files/docs_16.gif" title="Sakai 2.2 developer JVM tuning" width="16" align="absmiddle" border="0" height="16">
+                         <a href="http://bugs.sakaiproject.org/confluence/display/BOOT/Sakai+2.2+developer+JVM+tuning">Sakai 2.2 developer JVM tuning</a>
+                             <br>
+                            </div>
+                </div>
+    
+        
+
+<!--
+    Root decorator: this is a layer of abstraction that Confluence doesn't need. It will be removed eventually.
+-->
+
+
+
+
+    
+    
+
+
+
+
+
+<fieldset class="parameters hidden">
+    <input id="deleteCommentConfirmMessage" value="Are you sure you want to remove the comment?" type="hidden">
+    <input id="collapseTooltip" value="Click to toggle the display of this comment." type="hidden">
+</fieldset>
+
+
+
+
+
+<div id="comments-section" class="pageSection">
+    
+            <div class="section-header">
+            <h2 id="comments-section-title" class="section-title">
+                <a name="comments">Comments (20)</a>
+            </h2>
+            &nbsp;
+            <ul id="comment-top-links" class="global-comment-actions">
+                <li id="comment-show-hide">
+                    <a href="http://bugs.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?showComments=false#comments" id="comments-hide">Hide Comments</a>
+                    <a href="http://bugs.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?showComments=true#comments" id="comments-show" class="hidden">Show Comments</a>
+                </li>
+                <li id="comments-expand-collapse">
+                    <a href="#" id="comments-collapse">Collapse All</a>
+                    <span id="collapse-wait" class="hidden">Collapsing…</span>
+                    <span id="expand-wait" class="hidden">Expanding…</span>
+                    <a href="#" class="hidden" id="comments-expand">Expand All</a>
+                </li>
+                            </ul>
+        </div>
+    
+    
+                            <ol class="comment-threads top-level" id="page-comments">
+                        <li id="comment-thread-16529" class="comment-thread">
+                    <div class="comment" id="comment-16529">
+                <p class="comment-user-logo">
+                                            <a class="userLogoLink" href="http://bugs.sakaiproject.org/confluence/display/%7Ecaseyd"><img class="userLogo logo" src="Development+Environment+Setup+Walkthrough_files/sakpic.jpg" alt="" title="~caseyd"></a>
+                    </p>
+                <p class="date" title="Apr 27, 2006 14:17">
+                    Apr 27, 2006
+                </p>
+                <div title="Click to toggle the display of this comment." style="cursor: pointer;" class="comment-header comment-toggle">
+                    <h4 class="author"><a href="http://bugs.sakaiproject.org/confluence/display/%7Ecaseyd">casey dunn</a> says:</h4>
+                    <span class="excerpt">Nice work here.  Is discussion of a local svn repository discussed anywhere? Aft...</span>
+                </div>
+                <div class="comment-body">
+                    <div class="comment-content wiki-content">
+                        <p>Nice work here. </p>
+
+<p>Is discussion of a local svn repository discussed anywhere? After
+all the developer will be enhancing the value of Sakai to their local
+organization by modifying and adding to the source they've now exported
+and loaded into eclipse.</p>
+
+<p>Would be a shame not to have the local work under revision control.</p>
+                    </div>
+                    <div class="comment-actions">
+                                                    <ul id="comment-actions-secondary">
+                                                          <li class="first comment-permalink">
+            <a title="Permanent link to this comment" href="http://bugs.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=16529#comment-16529" id="comment-permalink-16529"><span>Permalink</span></a></li>
+            </ul>
+                            <ul id="comment-actions-primary">
+            </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+    rdf:about="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=16529#comment-16529"
+    dc:identifier="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=16529#comment-16529"
+    dc:title="Development Environment Setup Walkthrough"
+    trackback:ping="http://confluence.sakaiproject.org/confluence/rpc/trackback/16529"/>
+</rdf:RDF>
+-->
+
+                    
+                                </li>
+                        <li id="comment-thread-18537" class="comment-thread">
+                    <div class="comment odd" id="comment-18537">
+                <p class="comment-user-logo">
+                                                        <img class="userLogo logo anonymous" src="Development+Environment+Setup+Walkthrough_files/anonymous.png" alt="" title="Anonymous">
+
+                            </p>
+                <p class="date" title="May 30, 2006 05:26">
+                    May 30, 2006
+                </p>
+                <div title="Click to toggle the display of this comment." style="cursor: pointer;" class="comment-header comment-toggle">
+                    <h4 class="author"><a href="http://bugs.sakaiproject.org/confluence/display/%7Eariconsul">Ari Consul</a> says:</h4>
+                    <span class="excerpt">Complements to Aaron and contributers to this guide. Worked very well. Comments ...</span>
+                </div>
+                <div class="comment-body">
+                    <div class="comment-content wiki-content">
+                        <p>Complements to Aaron and contributers to this guide.  Worked very well.</p>
+
+<p>Comments and minor nitpicks after after install:</p>
+
+<ul class="alternate" type="square">
+	<li>for beginners, a separate
+page on what PATH is and on setting environmental variables might be
+helpful at lowering the barrier to installing (especially if using a
+new OS)</li>
+</ul>
+
+
+<ul class="alternate" type="square">
+	<li>Instruction 2.3 (mysql
+install) - Mac Users installation issue – if you have already installed
+mysql 5.0 and need to use mysql 4.1, you will run into the error "you
+cannot continue. there is nothing to install". In my case, this was
+fixed by removing "mysql-standard-5.0.15-osx10.4-powerpc.pkg" and then
+installing (apparently mysql expects you to have only one version of
+mysql installed at a time).</li>
+</ul>
+
+
+<ul class="alternate" type="square">
+	<li>Instructions 4.3, 5.3, and
+6.7 fail if the user (a) has already installed or (b) chooses a
+directory other than what is given. Step 8 (svn checkout) and in
+particular 8.4 provides more flexible instructions.</li>
+</ul>
+
+
+<ul class="alternate" type="square">
+	<li>Instruction 9.1 - as
+mentioned by other commenters - there was no mention of $TOMCAT_HOME
+before instruction 9.1 - this should be $CATALINA_HOME (or there should
+be an explicit instruction to set $TOMCAT_HOME).</li>
+</ul>
+
+                    </div>
+                    <div class="comment-actions">
+                                                    <ul id="comment-actions-secondary">
+                                                          <li class="first comment-permalink">
+            <a title="Permanent link to this comment" href="http://bugs.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=18537#comment-18537" id="comment-permalink-18537"><span>Permalink</span></a></li>
+            </ul>
+                            <ul id="comment-actions-primary">
+            </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+    rdf:about="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=18537#comment-18537"
+    dc:identifier="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=18537#comment-18537"
+    dc:title="Development Environment Setup Walkthrough"
+    trackback:ping="http://confluence.sakaiproject.org/confluence/rpc/trackback/18537"/>
+</rdf:RDF>
+-->
+
+                    
+                                </li>
+                        <li id="comment-thread-31010" class="comment-thread">
+                    <div class="comment" id="comment-31010">
+                <p class="comment-user-logo">
+                                                        <img class="userLogo logo anonymous" src="Development+Environment+Setup+Walkthrough_files/anonymous.png" alt="" title="Anonymous">
+
+                            </p>
+                <p class="date" title="Nov 02, 2006 01:27">
+                    Nov 02, 2006
+                </p>
+                <div title="Click to toggle the display of this comment." style="cursor: pointer;" class="comment-header comment-toggle">
+                    <h4 class="author"><a href="http://bugs.sakaiproject.org/confluence/display/%7Eparisgrill">Jae-Woo Park</a> says:</h4>
+                    <span class="excerpt">Question: Do we have to restart Tomcat each time we do a build?  I am trying to ...</span>
+                </div>
+                <div class="comment-body">
+                    <div class="comment-content wiki-content">
+                        <p>Question: Do we have to restart Tomcat each time we do a build?</p>
+
+<p>I am trying to develop a tool and even after using antiJARLocking="true" <br>
+for Windows, I have to restart Tomcat in order to make my code work and <br>
+it's taking me a long time to develop. Any suggestions?</p>
+
+                    </div>
+                    <div class="comment-actions">
+                                                    <ul id="comment-actions-secondary">
+                                                          <li class="first comment-permalink">
+            <a title="Permanent link to this comment" href="http://bugs.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=31010#comment-31010" id="comment-permalink-31010"><span>Permalink</span></a></li>
+            </ul>
+                            <ul id="comment-actions-primary">
+            </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+    rdf:about="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=31010#comment-31010"
+    dc:identifier="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=31010#comment-31010"
+    dc:title="Development Environment Setup Walkthrough"
+    trackback:ping="http://confluence.sakaiproject.org/confluence/rpc/trackback/31010"/>
+</rdf:RDF>
+-->
+
+                    
+                                </li>
+                        <li id="comment-thread-32031" class="comment-thread">
+                    <div class="comment odd" id="comment-32031">
+                <p class="comment-user-logo">
+                                                        <img class="userLogo logo anonymous" src="Development+Environment+Setup+Walkthrough_files/anonymous.png" alt="" title="Anonymous">
+
+                            </p>
+                <p class="date" title="Nov 13, 2006 07:16">
+                    Nov 13, 2006
+                </p>
+                <div title="Click to toggle the display of this comment." style="cursor: pointer;" class="comment-header comment-toggle">
+                    <h4 class="author"><a href="http://bugs.sakaiproject.org/confluence/display/%7Eushuaia">nicolas hulot</a> says:</h4>
+                    <span class="excerpt">Hello,   I have to make a new tool in Sakaï, and customizing a little Sakaï. I f...</span>
+                </div>
+                <div class="comment-body">
+                    <div class="comment-content wiki-content">
+                        <p>Hello, </p>
+
+<p>I have to make a new tool in Sakaï, and customizing a little Sakaï.
+I follow this instruction, but a I didn't understand very well the
+method of developpement...</p>
+
+<p>My source is in this location : <br>
+c:\sakai-src</p>
+
+<p>Tomcat is here : <br>
+c:\tomcat-5.5.17\webapp</p>
+
+<p>I compile the code of Sakaï into Eclipse. But, how can I configure
+Eclipse to automatically deploy all sakai source into tomcat ? Is this
+possible ? </p>
+                    </div>
+                    <div class="comment-actions">
+                                                    <ul id="comment-actions-secondary">
+                                                          <li class="first comment-permalink">
+            <a title="Permanent link to this comment" href="http://bugs.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=32031#comment-32031" id="comment-permalink-32031"><span>Permalink</span></a></li>
+            </ul>
+                            <ul id="comment-actions-primary">
+            </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+    rdf:about="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=32031#comment-32031"
+    dc:identifier="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=32031#comment-32031"
+    dc:title="Development Environment Setup Walkthrough"
+    trackback:ping="http://confluence.sakaiproject.org/confluence/rpc/trackback/32031"/>
+</rdf:RDF>
+-->
+
+                    
+                                </li>
+                        <li id="comment-thread-34684" class="comment-thread">
+                    <div class="comment" id="comment-34684">
+                <p class="comment-user-logo">
+                                            <a class="userLogoLink" href="http://bugs.sakaiproject.org/confluence/display/%7Egbhatnag"><img class="userLogo logo" src="Development+Environment+Setup+Walkthrough_files/ghost.png" alt="" title="~gbhatnag"></a>
+                    </p>
+                <p class="date" title="Dec 14, 2006 12:40">
+                    Dec 14, 2006
+                </p>
+                <div title="Click to toggle the display of this comment." style="cursor: pointer;" class="comment-header comment-toggle">
+                    <h4 class="author"><a href="http://bugs.sakaiproject.org/confluence/display/%7Egbhatnag">Gaurav Cedric Bhatnagar</a> says:</h4>
+                    <span class="excerpt">Hi there this is a great guide. Thanks very much to everyone who has contributed...</span>
+                </div>
+                <div class="comment-body">
+                    <div class="comment-content wiki-content">
+                        <p>Hi there - this is a great guide.  Thanks very much to everyone who has contributed.</p>
+
+<p>I'm working on a project where some of these tools are required to
+be set up to run Sakai and others are not. When directing people to
+this site from my documentation, it'd be great to link them directly to
+the step they need instead of the top of the page. This can be done by
+placing anchors within the Wiki Markup. The anchors could then be
+referenced externally (or internally, say, for a table of contents or
+dependent steps) to jump to certain sections within the page.</p>
+
+<p>This is a pretty simple task and I'd be happy to do it if it's
+something the Programmer's Cafe WG finds useful and if I were given
+permissions to edit the page.</p>
+
+<p>Thanks.</p>
+                    </div>
+                    <div class="comment-actions">
+                                                    <ul id="comment-actions-secondary">
+                                                          <li class="first comment-permalink">
+            <a title="Permanent link to this comment" href="http://bugs.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=34684#comment-34684" id="comment-permalink-34684"><span>Permalink</span></a></li>
+            </ul>
+                            <ul id="comment-actions-primary">
+            </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+    rdf:about="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=34684#comment-34684"
+    dc:identifier="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=34684#comment-34684"
+    dc:title="Development Environment Setup Walkthrough"
+    trackback:ping="http://confluence.sakaiproject.org/confluence/rpc/trackback/34684"/>
+</rdf:RDF>
+-->
+
+                    
+                                </li>
+                        <li id="comment-thread-2621781" class="comment-thread">
+                    <div class="comment odd" id="comment-2621781">
+                <p class="comment-user-logo">
+                                                        <img class="userLogo logo anonymous" src="Development+Environment+Setup+Walkthrough_files/anonymous.png" alt="" title="Anonymous">
+
+                            </p>
+                <p class="date" title="Sep 21, 2007 19:41">
+                    Sep 21, 2007
+                </p>
+                <div title="Click to toggle the display of this comment." style="cursor: pointer;" class="comment-header comment-toggle">
+                    <h4 class="author"><a href="http://bugs.sakaiproject.org/confluence/display/%7Edwmegill@miracosta.edu">David Megill</a> says:</h4>
+                    <span class="excerpt">Cool, I got it all to work but I had to add the M2REPO variable instead of the M...</span>
+                </div>
+                <div class="comment-body">
+                    <div class="comment-content wiki-content">
+                        <p>Cool,
+I got it all to work but I had to add the M2_REPO variable instead of
+the MAVEN_REPO variable in instruction 17.3. The M2_REPO has to point
+to /opt/.m2/repository.</p>
+
+<p>Also you need one more project imported:  cm-api</p>
+
+<p>Thanks</p>
+                    </div>
+                    <div class="comment-actions">
+                                                    <ul id="comment-actions-secondary">
+                                                          <li class="first comment-permalink">
+            <a title="Permanent link to this comment" href="http://bugs.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=2621781#comment-2621781" id="comment-permalink-2621781"><span>Permalink</span></a></li>
+            </ul>
+                            <ul id="comment-actions-primary">
+            </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+    rdf:about="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=2621781#comment-2621781"
+    dc:identifier="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=2621781#comment-2621781"
+    dc:title="Development Environment Setup Walkthrough"
+    trackback:ping="http://confluence.sakaiproject.org/confluence/rpc/trackback/2621781"/>
+</rdf:RDF>
+-->
+
+                    
+                                </li>
+                        <li id="comment-thread-3080246" class="comment-thread">
+                    <div class="comment" id="comment-3080246">
+                <p class="comment-user-logo">
+                                                        <img class="userLogo logo anonymous" src="Development+Environment+Setup+Walkthrough_files/anonymous.png" alt="" title="Anonymous">
+
+                            </p>
+                <p class="date" title="Sep 28, 2007 21:05">
+                    Sep 28, 2007
+                </p>
+                <div title="Click to toggle the display of this comment." style="cursor: pointer;" class="comment-header comment-toggle">
+                    <h4 class="author"><a href="http://bugs.sakaiproject.org/confluence/display/%7Eliqing">Li Qing</a> says:</h4>
+                    <span class="excerpt">Now, Dbimpl, should be reconfiged to M2REPO/commonspool/commonspool/1.3/commonsp...</span>
+                </div>
+                <div class="comment-body">
+                    <div class="comment-content wiki-content">
+                        <p>Now, Db-impl, should be reconfiged to M2_REPO/commons-pool/commons-pool/1.3/commons-pool-1.3.jar</p>
+
+<p>Thanks</p>
+                    </div>
+                    <div class="comment-actions">
+                                                    <ul id="comment-actions-secondary">
+                                                          <li class="first comment-permalink">
+            <a title="Permanent link to this comment" href="http://bugs.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=3080246#comment-3080246" id="comment-permalink-3080246"><span>Permalink</span></a></li>
+            </ul>
+                            <ul id="comment-actions-primary">
+            </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+    rdf:about="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=3080246#comment-3080246"
+    dc:identifier="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=3080246#comment-3080246"
+    dc:title="Development Environment Setup Walkthrough"
+    trackback:ping="http://confluence.sakaiproject.org/confluence/rpc/trackback/3080246"/>
+</rdf:RDF>
+-->
+
+                    
+                                    <ol class="comment-threads">
+                                        <li id="comment-thread-3080247" class="comment-thread">
+                    <div class="comment odd" id="comment-3080247">
+                <p class="comment-user-logo">
+                                            <a class="userLogoLink" href="http://bugs.sakaiproject.org/confluence/display/%7Eaaronz"><img class="userLogo logo" src="Development+Environment+Setup+Walkthrough_files/aaron_z_small.jpg" alt="" title="~aaronz"></a>
+                    </p>
+                <p class="date" title="Sep 29, 2007 05:24">
+                    Sep 29, 2007
+                </p>
+                <div title="Click to toggle the display of this comment." style="cursor: pointer;" class="comment-header comment-toggle">
+                    <h4 class="author"><a href="http://bugs.sakaiproject.org/confluence/display/%7Eaaronz">Aaron Zeckoski</a> says:</h4>
+                    <span class="excerpt">This was reported as a bug in:</span>
+                </div>
+                <div class="comment-body">
+                    <div class="comment-content wiki-content">
+                        <p>This was reported as a bug in: <a href="http://jira.sakaiproject.org/jira/browse/SAK-11715" rel="nofollow">http://jira.sakaiproject.org/jira/browse/SAK-11715</a><br>
+Hopefully it will be fixed soon.</p>
+                    </div>
+                    <div class="comment-actions">
+                                                    <ul id="comment-actions-secondary">
+                                                          <li class="first comment-permalink">
+            <a title="Permanent link to this comment" href="http://bugs.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=3080247#comment-3080247" id="comment-permalink-3080247"><span>Permalink</span></a></li>
+            </ul>
+                            <ul id="comment-actions-primary">
+            </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+    rdf:about="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=3080247#comment-3080247"
+    dc:identifier="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=3080247#comment-3080247"
+    dc:title="Development Environment Setup Walkthrough"
+    trackback:ping="http://confluence.sakaiproject.org/confluence/rpc/trackback/3080247"/>
+</rdf:RDF>
+-->
+
+                    
+                                </li>
+                                </ol>
+                        </li>
+                        <li id="comment-thread-3080267" class="comment-thread">
+                    <div class="comment" id="comment-3080267">
+                <p class="comment-user-logo">
+                                                        <img class="userLogo logo anonymous" src="Development+Environment+Setup+Walkthrough_files/anonymous.png" alt="" title="Anonymous">
+
+                            </p>
+                <p class="date" title="Sep 30, 2007 18:48">
+                    Sep 30, 2007
+                </p>
+                <div title="Click to toggle the display of this comment." style="cursor: pointer;" class="comment-header comment-toggle">
+                    <h4 class="author"><a href="http://bugs.sakaiproject.org/confluence/display/%7Eliqing">Li Qing</a> says:</h4>
+                    <span class="excerpt">And there is still another we should be careful. The jdk 1.6 seems not to be com...</span>
+                </div>
+                <div class="comment-body">
+                    <div class="comment-content wiki-content">
+                        <p>And there is still another we should be careful.<br>
+The jdk 1.6 seems not to be compatible with maven 2, use jdk 1.5 !</p>
+                    </div>
+                    <div class="comment-actions">
+                                                    <ul id="comment-actions-secondary">
+                                                          <li class="first comment-permalink">
+            <a title="Permanent link to this comment" href="http://bugs.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=3080267#comment-3080267" id="comment-permalink-3080267"><span>Permalink</span></a></li>
+            </ul>
+                            <ul id="comment-actions-primary">
+            </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+    rdf:about="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=3080267#comment-3080267"
+    dc:identifier="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=3080267#comment-3080267"
+    dc:title="Development Environment Setup Walkthrough"
+    trackback:ping="http://confluence.sakaiproject.org/confluence/rpc/trackback/3080267"/>
+</rdf:RDF>
+-->
+
+                    
+                                </li>
+                        <li id="comment-thread-4915234" class="comment-thread">
+                    <div class="comment odd" id="comment-4915234">
+                <p class="comment-user-logo">
+                                            <a class="userLogoLink" href="http://bugs.sakaiproject.org/confluence/display/%7Ejmarca"><img class="userLogo logo" src="Development+Environment+Setup+Walkthrough_files/headshot.jpg" alt="" title="~jmarca"></a>
+                    </p>
+                <p class="date" title="Oct 30, 2007 13:03">
+                    Oct 30, 2007
+                </p>
+                <div title="Click to toggle the display of this comment." style="cursor: pointer;" class="comment-header comment-toggle">
+                    <h4 class="author"><a href="http://bugs.sakaiproject.org/confluence/display/%7Ejmarca">James Marca</a> says:</h4>
+                    <span class="excerpt">Please clarify the following. At the top of this page, the text says "This is cu...</span>
+                </div>
+                <div class="comment-body">
+                    <div class="comment-content wiki-content">
+                        <p>Please clarify the following.  At the top of this page, the text says<br>
+"This is currently tailored for Sakai 2.3.x."  </p>
+
+<p>But if you follow the link in Notes for developers using Sakai 2.4.x-, it says</p>
+
+<p> If you are developing for 2.5.x, please check out the current
+Development Environment Setup Walkthrough which covers the newer
+version of Sakai with the changes for maven 2.</p>
+
+<p>Confusing.  Is that a broken link, or is this really for 2.5.x.  I think the latter, but clarification/correction would be good.</p>
+                    </div>
+                    <div class="comment-actions">
+                                                    <ul id="comment-actions-secondary">
+                                                          <li class="first comment-permalink">
+            <a title="Permanent link to this comment" href="http://bugs.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=4915234#comment-4915234" id="comment-permalink-4915234"><span>Permalink</span></a></li>
+            </ul>
+                            <ul id="comment-actions-primary">
+            </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+    rdf:about="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=4915234#comment-4915234"
+    dc:identifier="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=4915234#comment-4915234"
+    dc:title="Development Environment Setup Walkthrough"
+    trackback:ping="http://confluence.sakaiproject.org/confluence/rpc/trackback/4915234"/>
+</rdf:RDF>
+-->
+
+                    
+                                    <ol class="comment-threads">
+                                        <li id="comment-thread-5570691" class="comment-thread">
+                    <div class="comment" id="comment-5570691">
+                <p class="comment-user-logo">
+                                            <a class="userLogoLink" href="http://bugs.sakaiproject.org/confluence/display/%7Earwhyte"><img class="userLogo logo" src="Development+Environment+Setup+Walkthrough_files/arwhyte_mugshot.jpg" alt="" title="~arwhyte"></a>
+                    </p>
+                <p class="date" title="Nov 06, 2007 16:35">
+                    Nov 06, 2007
+                </p>
+                <div title="Click to toggle the display of this comment." style="cursor: pointer;" class="comment-header comment-toggle">
+                    <h4 class="author"><a href="http://bugs.sakaiproject.org/confluence/display/%7Earwhyte">Anthony Whyte</a> says:</h4>
+                    <span class="excerpt">Yep, a typo. Thanks for pointing it out. I've updated the page.</span>
+                </div>
+                <div class="comment-body">
+                    <div class="comment-content wiki-content">
+                        <p>Yep, a typo. Thanks for pointing it out.  I've updated the page.</p>
+                    </div>
+                    <div class="comment-actions">
+                                                    <ul id="comment-actions-secondary">
+                                                          <li class="first comment-permalink">
+            <a title="Permanent link to this comment" href="http://bugs.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=5570691#comment-5570691" id="comment-permalink-5570691"><span>Permalink</span></a></li>
+            </ul>
+                            <ul id="comment-actions-primary">
+            </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+    rdf:about="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=5570691#comment-5570691"
+    dc:identifier="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=5570691#comment-5570691"
+    dc:title="Development Environment Setup Walkthrough"
+    trackback:ping="http://confluence.sakaiproject.org/confluence/rpc/trackback/5570691"/>
+</rdf:RDF>
+-->
+
+                    
+                                </li>
+                                </ol>
+                        </li>
+                        <li id="comment-thread-7471324" class="comment-thread">
+                    <div class="comment odd" id="comment-7471324">
+                <p class="comment-user-logo">
+                                                        <img class="userLogo logo anonymous" src="Development+Environment+Setup+Walkthrough_files/anonymous.png" alt="" title="Anonymous">
+
+                            </p>
+                <p class="date" title="Nov 17, 2007 09:37">
+                    Nov 17, 2007
+                </p>
+                <div title="Click to toggle the display of this comment." style="cursor: pointer;" class="comment-header comment-toggle">
+                    <h4 class="author"><a href="http://bugs.sakaiproject.org/confluence/display/%7Ewwheeler">Willie Wheeler</a> says:</h4>
+                    <span class="excerpt">For Java developers on Windows who already have a lot of Java stuff installed on...</span>
+                </div>
+                <div class="comment-body">
+                    <div class="comment-content wiki-content">
+                        <p>For
+Java developers on Windows who already have a lot of Java stuff
+installed on their machine (for example, Java 6, Tomcat 6.x, etc.) for
+other projects, you might find the following helpful. Create a separate
+Windows user account called Sakai, and remove Java, Tomcat, Maven, etc.
+environment variables from the system variables (if you defined them
+there). Instead make them user variables, and augment the system Path
+variable by including a user variable</p>
+
+<div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
+<pre class="code-java">Path=%JAVA_HOME%\bin;%MAVEN2_HOME%\bin;%CATALINA_HOME%\bin;%MYSQL_HOME%\bin</pre>
+</div></div>
+
+<p>That way your Sakai account will use the correct configuration and
+you can continue to use Java 6, Tomcat 6.x, etc. for other work. I took
+this approach and it's working pretty nicely.</p>
+
+<p>Note that the JDK installer drops the java.exe, javaw.exe and
+javaws.exe executables in C:\WINDOWS\system32, and that segment appears
+early on the path. It appears that Windows puts the user-defined path
+segments after the system-defined path, and the system-defined path
+includes C:\WINDOWS\system32. I solved that by removing java.exe (along
+with the other two) from C:\WINDOWS\system32.</p>
+
+<p>Anyway hope somebody finds that helpful.</p>
+
+<p><img class="emoticon" src="Development+Environment+Setup+Walkthrough_files/warning.gif" alt="" width="16" align="absmiddle" border="0" height="16"> Also, there appears to be an unstated dependency on the Eclipse part. Eclipse is complaining that site-manage-api needs cm-api.</p>
+                    </div>
+                    <div class="comment-actions">
+                                                    <ul id="comment-actions-secondary">
+                                                          <li class="first comment-permalink">
+            <a title="Permanent link to this comment" href="http://bugs.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=7471324#comment-7471324" id="comment-permalink-7471324"><span>Permalink</span></a></li>
+            </ul>
+                            <ul id="comment-actions-primary">
+            </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+    rdf:about="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=7471324#comment-7471324"
+    dc:identifier="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=7471324#comment-7471324"
+    dc:title="Development Environment Setup Walkthrough"
+    trackback:ping="http://confluence.sakaiproject.org/confluence/rpc/trackback/7471324"/>
+</rdf:RDF>
+-->
+
+                    
+                                </li>
+                        <li id="comment-thread-7471899" class="comment-thread">
+                    <div class="comment" id="comment-7471899">
+                <p class="comment-user-logo">
+                                                        <img class="userLogo logo anonymous" src="Development+Environment+Setup+Walkthrough_files/anonymous.png" alt="" title="Anonymous">
+
+                            </p>
+                <p class="date" title="Nov 29, 2007 13:02">
+                    Nov 29, 2007
+                </p>
+                <div title="Click to toggle the display of this comment." style="cursor: pointer;" class="comment-header comment-toggle">
+                    <h4 class="author"><a href="http://bugs.sakaiproject.org/confluence/display/%7Ealanhoyle">Alan Hoyle</a> says:</h4>
+                    <span class="excerpt">There are a few minor errors in this, including the following:  Step 1.6: should...</span>
+                </div>
+                <div class="comment-body">
+                    <div class="comment-content wiki-content">
+                        <p>There are a few minor errors in this, including the following:</p>
+
+<p>Step 1.6: should be moved into step 6, as we can't do it without having tomcat first.</p>
+
+<p>Step 10.1: Some flavors of Windows (XP at least) won't let you
+create or rename a directory that begins with a "." through the GUI. To
+get around this limitation, go out to a command line, change to the
+home directory (probably by running something like "cd c:\Documents and
+Settings\username") and run "md .m2" at the prompt. From there, you can
+go back into the GUI and work as normal. </p>
+
+<p>Step 14: Should say to download the "most recent WTP Release build."
+Having this specified would have saved me hours of frustration. More
+recent builds from the "Maintenance" or "Stable (Milestone)" sections
+don't include the "All-In-One" packages, and instead require manual
+installation of all the prerequisites.</p>
+
+<p>Step 15 and 16: Both of these installations have "Integrations" as
+part of the features they attempt to install if you try to install the
+whole thing by default. (AJDT and Mylyn for SpringIDE; Buckminster and
+Mylyn for Subclipse.) If you don't uncheck those "Integrations" boxes,
+Eclipse won't let you install the add-ons: the "Finish" button is
+disabled and an error message appears at the top of the window.</p>
+
+<p>Step 17.3.2: MAVEN_REPO is for Maven 1.x.  Instead, one should create M2_REPO and set it equal to $USER_HOME/.m2/repository or </p>
+
+<p>Step 17.6.1:  the path should be "/opt/&lt;sakai-src&gt;" or "/opt/cafe_trunk" not the 2.2 version.  </p>
+
+<p>Step 17.6.3:  One also needs to select "cm-api" in order to build.  </p>
+
+<p>See you all in Newport Beach!</p>
+                    </div>
+                    <div class="comment-actions">
+                                                    <ul id="comment-actions-secondary">
+                                                          <li class="first comment-permalink">
+            <a title="Permanent link to this comment" href="http://bugs.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=7471899#comment-7471899" id="comment-permalink-7471899"><span>Permalink</span></a></li>
+            </ul>
+                            <ul id="comment-actions-primary">
+            </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+    rdf:about="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=7471899#comment-7471899"
+    dc:identifier="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=7471899#comment-7471899"
+    dc:title="Development Environment Setup Walkthrough"
+    trackback:ping="http://confluence.sakaiproject.org/confluence/rpc/trackback/7471899"/>
+</rdf:RDF>
+-->
+
+                    
+                                </li>
+                        <li id="comment-thread-7962737" class="comment-thread">
+                    <div class="comment odd" id="comment-7962737">
+                <p class="comment-user-logo">
+                                                        <img class="userLogo logo anonymous" src="Development+Environment+Setup+Walkthrough_files/anonymous.png" alt="" title="Anonymous">
+
+                            </p>
+                <p class="date" title="Dec 02, 2007 15:32">
+                    Dec 02, 2007
+                </p>
+                <div title="Click to toggle the display of this comment." style="cursor: pointer;" class="comment-header comment-toggle">
+                    <h4 class="author"><a href="http://bugs.sakaiproject.org/confluence/display/%7Eleveque">Jean-François Lévêque (old account)</a> says:</h4>
+                    <span class="excerpt">Steps 1.6 and 6.8 have slightly different JAVAOPTS, what about just refering 6.8...</span>
+                </div>
+                <div class="comment-body">
+                    <div class="comment-content wiki-content">
+                        <p>Steps 1.6 and 6.8 have slightly different JAVA_OPTS, what about just refering 6.8 in 1.6 and not providing a value again.</p>
+
+<p>Step 2.1, mysql -V (or --version) has a cleaner output if you only want to know the MySQL version.</p>
+                    </div>
+                    <div class="comment-actions">
+                                                    <ul id="comment-actions-secondary">
+                                                          <li class="first comment-permalink">
+            <a title="Permanent link to this comment" href="http://bugs.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=7962737#comment-7962737" id="comment-permalink-7962737"><span>Permalink</span></a></li>
+            </ul>
+                            <ul id="comment-actions-primary">
+            </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+    rdf:about="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=7962737#comment-7962737"
+    dc:identifier="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=7962737#comment-7962737"
+    dc:title="Development Environment Setup Walkthrough"
+    trackback:ping="http://confluence.sakaiproject.org/confluence/rpc/trackback/7962737"/>
+</rdf:RDF>
+-->
+
+                    
+                                    <ol class="comment-threads">
+                                        <li id="comment-thread-43909192" class="comment-thread">
+                    <div class="comment" id="comment-43909192">
+                <p class="comment-user-logo">
+                                            <a class="userLogoLink" href="http://bugs.sakaiproject.org/confluence/display/%7Etrillich"><img class="userLogo logo" src="Development+Environment+Setup+Walkthrough_files/headshot-icon.png" alt="" title="~trillich"></a>
+                    </p>
+                <p class="date" title="Sep 09, 2008 11:32">
+                    Sep 09
+                </p>
+                <div title="Click to toggle the display of this comment." style="cursor: pointer;" class="comment-header comment-toggle">
+                    <h4 class="author"><a href="http://bugs.sakaiproject.org/confluence/display/%7Etrillich">will trillich</a> says:</h4>
+                    <span class="excerpt">it would also be very helpful if these memoryrequests specified in JAVAOPTS were...</span>
+                </div>
+                <div class="comment-body">
+                    <div class="comment-content wiki-content">
+                        <p>it
+would also be very helpful if these memory-requests specified in
+JAVA_OPTS were given in the context of
+how-much-ram-the-example-server-has-available. for example, -Xmx2000m
+would be relatively meaningless on a 2gb server (who wants to use swap
+space to run your sakai? yikes!)</p>
+
+<ul>
+	<li>e.g. on a ##gb server, start with having your JAVA_OPTS
+include -Xmx####m and look for XXX behavior. adjust up if you see YYY,
+or down if you see ZZZ...</li>
+	<li>if your database is on the same server for a test-run, watch out for QQQ...</li>
+</ul>
+
+
+<p>simply saying "ask for this much ram" isn't all that helpful without a bit-o-context.</p>
+                    </div>
+                    <div class="comment-actions">
+                                                    <ul id="comment-actions-secondary">
+                                                          <li class="first comment-permalink">
+            <a title="Permanent link to this comment" href="http://bugs.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=43909192#comment-43909192" id="comment-permalink-43909192"><span>Permalink</span></a></li>
+            </ul>
+                            <ul id="comment-actions-primary">
+            </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+    rdf:about="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=43909192#comment-43909192"
+    dc:identifier="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=43909192#comment-43909192"
+    dc:title="Development Environment Setup Walkthrough"
+    trackback:ping="http://confluence.sakaiproject.org/confluence/rpc/trackback/43909192"/>
+</rdf:RDF>
+-->
+
+                    
+                                </li>
+                                </ol>
+                        </li>
+                        <li id="comment-thread-7962774" class="comment-thread">
+                    <div class="comment odd" id="comment-7962774">
+                <p class="comment-user-logo">
+                                            <a class="userLogoLink" href="http://bugs.sakaiproject.org/confluence/display/%7Etrillich"><img class="userLogo logo" src="Development+Environment+Setup+Walkthrough_files/headshot-icon.png" alt="" title="~trillich"></a>
+                    </p>
+                <p class="date" title="Dec 03, 2007 11:42">
+                    Dec 03, 2007
+                </p>
+                <div title="Click to toggle the display of this comment." style="cursor: pointer;" class="comment-header comment-toggle">
+                    <h4 class="author"><a href="http://bugs.sakaiproject.org/confluence/display/%7Etrillich">will trillich</a> says:</h4>
+                    <span class="excerpt">at serensoft, we were experiencing lots of "java.lang.OutOfMemoryError: PermGen ...</span>
+                </div>
+                <div class="comment-body">
+                    <div class="comment-content wiki-content">
+                        <p>at serensoft, we were experiencing lots of "java.lang.OutOfMemoryError: PermGen space" errors with sakai 2.5.x – until we added</p>
+
+<p>   -XX:+CMSPermGenSweepingEnabled</p>
+
+<p>to JAVA_OPTS. the server is now very responsive – and no PermGen space errors, no restarts, in over a week, now. <img class="emoticon" src="Development+Environment+Setup+Walkthrough_files/smile.gif" alt="" width="20" align="absmiddle" border="0" height="20"></p>
+
+<p>for now, our full JAVA_OPTS environment variable contains:</p>
+
+<p>-server<br>
+-Xmx1500m<br>
+-XX:MaxPermSize=200m<br>
+-XX:+CMSPermGenSweepingEnabled<br>
+-XX:+UseParallelGC<br>
+-Djava.awt.headless=true</p>
+                    </div>
+                    <div class="comment-actions">
+                                                    <ul id="comment-actions-secondary">
+                                                          <li class="first comment-permalink">
+            <a title="Permanent link to this comment" href="http://bugs.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=7962774#comment-7962774" id="comment-permalink-7962774"><span>Permalink</span></a></li>
+            </ul>
+                            <ul id="comment-actions-primary">
+            </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+    rdf:about="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=7962774#comment-7962774"
+    dc:identifier="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=7962774#comment-7962774"
+    dc:title="Development Environment Setup Walkthrough"
+    trackback:ping="http://confluence.sakaiproject.org/confluence/rpc/trackback/7962774"/>
+</rdf:RDF>
+-->
+
+                    
+                                    <ol class="comment-threads">
+                                        <li id="comment-thread-43909190" class="comment-thread">
+                    <div class="comment" id="comment-43909190">
+                <p class="comment-user-logo">
+                                            <a class="userLogoLink" href="http://bugs.sakaiproject.org/confluence/display/%7Etrillich"><img class="userLogo logo" src="Development+Environment+Setup+Walkthrough_files/headshot-icon.png" alt="" title="~trillich"></a>
+                    </p>
+                <p class="date" title="Sep 09, 2008 11:26">
+                    Sep 09
+                </p>
+                <div title="Click to toggle the display of this comment." style="cursor: pointer;" class="comment-header comment-toggle">
+                    <h4 class="author"><a href="http://bugs.sakaiproject.org/confluence/display/%7Etrillich">will trillich</a> says:</h4>
+                    <span class="excerpt">in fact, we've had tomcat running at Serensoft for MONTHS at a time now, without...</span>
+                </div>
+                <div class="comment-body">
+                    <div class="comment-content wiki-content">
+                        <p>in fact, we've had tomcat running at Serensoft for MONTHS at a time now, without any PermGen space errors. woo hoo!</p>
+
+<p>these days (knock on wood), the only time we restart it is after a <b>svn install sakai:deploy</b> as it's been rock solid</p>
+                    </div>
+                    <div class="comment-actions">
+                                                    <ul id="comment-actions-secondary">
+                                                          <li class="first comment-permalink">
+            <a title="Permanent link to this comment" href="http://bugs.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=43909190#comment-43909190" id="comment-permalink-43909190"><span>Permalink</span></a></li>
+            </ul>
+                            <ul id="comment-actions-primary">
+            </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+    rdf:about="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=43909190#comment-43909190"
+    dc:identifier="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=43909190#comment-43909190"
+    dc:title="Development Environment Setup Walkthrough"
+    trackback:ping="http://confluence.sakaiproject.org/confluence/rpc/trackback/43909190"/>
+</rdf:RDF>
+-->
+
+                    
+                                </li>
+                                </ol>
+                        </li>
+                        <li id="comment-thread-8390764" class="comment-thread">
+                    <div class="comment odd" id="comment-8390764">
+                <p class="comment-user-logo">
+                                                        <img class="userLogo logo anonymous" src="Development+Environment+Setup+Walkthrough_files/anonymous.png" alt="" title="Anonymous">
+
+                            </p>
+                <p class="date" title="Dec 11, 2007 16:29">
+                    Dec 11, 2007
+                </p>
+                <div title="Click to toggle the display of this comment." style="cursor: pointer;" class="comment-header comment-toggle">
+                    <h4 class="author"><a href="http://bugs.sakaiproject.org/confluence/display/%7Ebjagg">Benito J. Gonzalez</a> says:</h4>
+                    <span class="excerpt">On a Windows machine, I had issues with Maven 2. The problem was that there were...</span>
+                </div>
+                <div class="comment-body">
+                    <div class="comment-content wiki-content">
+                        <p>On
+a Windows machine, I had issues with Maven 2. The problem was that
+there were spaces in the path to the repository. A bit of googling
+later, I found the solution: move the local repository.</p>
+<div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
+<pre class="code-java">C:\Document and Settings\&lt;user&gt;\.m2&gt;edit settings.xml</pre>
+</div></div>
+<p>  add "&lt;localRepository&gt;C:\maven2\repository&lt;/localRepository&gt;" before &lt;profiles&gt; stanza</p>
+<div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
+<pre class="code-java">C:\Document and Settings\&lt;user&gt;\.m2&gt; md C:\maven2
+C:\Document and Settings\&lt;user&gt;\.m2&gt; xcopy /E repository C:\maven2\</pre>
+</div></div>
+                    </div>
+                    <div class="comment-actions">
+                                                    <ul id="comment-actions-secondary">
+                                                          <li class="first comment-permalink">
+            <a title="Permanent link to this comment" href="http://bugs.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=8390764#comment-8390764" id="comment-permalink-8390764"><span>Permalink</span></a></li>
+            </ul>
+                            <ul id="comment-actions-primary">
+            </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+    rdf:about="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=8390764#comment-8390764"
+    dc:identifier="http://confluence.sakaiproject.org/confluence/display/BOOT/Development+Environment+Setup+Walkthrough?focusedCommentId=8390764#comment-8390764"
+    dc:title="Development Environment Setup Walkthrough"
+    trackback:ping="http://confluence.sakaiproject.org/confluence/rpc/trackback/8390764"/>
+</rdf:RDF>
+-->
+
+                    
+                                </li>
+                        <li id="comment-thread-34373792" class="comment-thread">
+                    <div class="comment" id="comment-34373792">
+                <p class="comment-user-logo">
+                                                        <img class="userLogo logo anonymous" src="Development+Environment+Setup+Walkthrough_files/anonymous.png" alt="" title="Anonymous">
+
+                            </p>
+                <p class="date" title="Jul 22, 2008 14:58">
+                    Jul 22
+                </p>
+                <div title="Click to toggle the display of this comment." style="cursor: pointer;" class="comment-header comment-toggle">
+                    <h4 class="author"><a href="http://bugs.sakaiproject.org/confluence/display/%7Esswinsb2@une.edu.au">sswinsb2@une.edu.au</a> says:</h4>
+                    <span class="excerpt">Just a note re Eclipse 3.4, it's got WTP bundled already.</span>
+                </div>
+                <div class="comment-body">
+                    <div class="comment-content wiki-content">
+                        <p>Just a note re Eclipse 3.4, it's got WTP bundled already.</p>
+                    </div>
+                    <div class="comment-actions">
+                                                    <ul id="comment-actions-secondary">
+                                                          <li class="first comment-permalink">
+            <a title="Permanent link to this comment" href="http://bugs.sakaiproject.org/confluence/display/BOOT/Development+Env"></a></li></ul></div></div></div></li></ol></div></div></div></body></html>
